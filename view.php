@@ -1,6 +1,21 @@
 <?php
 include 'partials/_db.php';
 
+$show = false;
+$wrongkey = "";
+
+if (isset($_POST['submitkey'])) {
+
+  if ($_POST['passkey'] == "ankit") {
+    $show = true;
+  } else {
+    $wrongkey = "Wrong Passkey!";
+  }
+
+}
+
+
+
 ?>
 
 <!doctype html>
@@ -9,28 +24,51 @@ include 'partials/_db.php';
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pratham Leads</title>
+  <title>GIEO Gita Manchaster</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11294526822">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'AW-11294526822');
-  </script>
+
+
 </head>
 
 <body>
+  <?php
+  include 'partials/_header.php';
+  ?>
+
+
+
+
+
+  <div class="container my-4">
+    <form action="" method="POST" class="d-flex flex-row  align-items-center justify-content-center ">
+      <div class="mb-3 flex-fill ">
+        <label for="exampleInputEmail1" class="form-label">Passkey</label>
+        <input type="text" name="passkey" required class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Enter the passkey to view.</div>
+      </div>
+
+      <div><button type="submit" name="submitkey" class="btn btn-primary mx-2 mb-2">Submit</button></div>
+    </form>
+    <p class="text-center text-danger">
+      <?php echo $wrongkey ?>
+    </p>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
 
 
   <div class="container">
 
-    <table class="table" id="tbl_exporttable_to_xls">
+    <?php
+      if($show){
+        echo '
+        <table class="table" id="tbl_exporttable_to_xls">
       <thead>
         <tr>
           <th scope="col">sr</th>
@@ -40,6 +78,10 @@ include 'partials/_db.php';
           <th scope="col">Email</th>
       </thead>
       <tbody>
+        
+        ';
+      }
+    ?>
 
 
 
@@ -52,10 +94,15 @@ include 'partials/_db.php';
 
         // Find the number of records returned
         $num = mysqli_num_rows($result);
-        echo "Total " . $num . " Entries found<br>";
+        if ($show)
+          echo "Total " . $num . " Entries found<br>";
         // echo " Entry Found <br>";
+        $in = "'";
+        
+          $gg= '<button class="btn btn-primary my-3" onclick="ExportToExcel('.$in.'xlsx'.$in.')">Download Excel sheet </button>';
+         if($show) echo $gg;
+        
         ?>
-        <button class="btn btn-primary" onclick="ExportToExcel('xlsx')">Download Excel sheet </button>
         <?php
         // Display the rows returned by the sql query
         if ($num > 0) {
@@ -64,21 +111,27 @@ include 'partials/_db.php';
           while ($row = mysqli_fetch_assoc($result)) {
             // echo var_dump($row);
             //echo $row['name'] .  ". Hello ". $row['phone'] ." Welcome to ". $row['email'] ."on".$row['date'];
-        
-            echo "<tr>
-      <th scope='row'>" . $num1 . "</th>
-      <td>" . $row['country'] . "</td>
-      <td>" . $row['name'] . "</td>
-      <td>" . $row['phone'] . "</td>
-      <td>" . $row['email'] . "</td>
-      
-    </tr>";
+            if ($show) {
+              echo "<tr>
+              <th scope='row'>" . $num1 . "</th>
+              <td>" . $row['country'] . "</td>
+              <td>" . $row['name'] . "</td>
+              <td>" . $row['phone'] . "</td>
+              <td>" . $row['email'] . "</td>
+              
+            </tr>";
+            }
             $num1++;
           }
         }
         ?>
-      </tbody>
-    </table>
+      <?php
+        if($show){
+          echo '
+          </tbody>
+    </table>';
+        }
+      ?>
 
   </div>
 
@@ -88,13 +141,13 @@ include 'partials/_db.php';
 
     // You can then get various components of the date and time from this object
     var year = currentDate.getFullYear(); // Get the current year
-    var month = currentDate.getMonth() + 1; 
-    var day = currentDate.getDate(); 
-    var hours = currentDate.getHours(); 
-    var minutes = currentDate.getMinutes(); 
-    var seconds = currentDate.getSeconds(); 
-    var milliseconds = currentDate.getMilliseconds(); 
-    
+    var month = currentDate.getMonth() + 1;
+    var day = currentDate.getDate();
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+    var milliseconds = currentDate.getMilliseconds();
+
 
     // You can also get the entire date and time as a string
     var dateTimeString = currentDate.toString(); // Get the date and time in a string format
@@ -104,13 +157,11 @@ include 'partials/_db.php';
 
     // Output the current date and time to the console
     // formattedDateTime = formattedDateTime.substring(4, 14)
-    currentStamp =day+'-'+month+'-'+year+' '+hours+'-' + minutes;
-    console.log(currentStamp)
-    console.log("Current Date and Time:", currentDate);
-    console.log("Current Date and Time:", formattedDateTime);
+    currentStamp = day + '-' + month + '-' + year + ' ' + hours + '-' + minutes;
+    
 
     var jsonString = JSON.stringify(currentDate);
-    console.log("Current Date and Time:", jsonString);
+    
 
 
     function ExportToExcel(type, fn, dl) {
@@ -118,7 +169,7 @@ include 'partials/_db.php';
       var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
       return dl ?
         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-        XLSX.writeFile(wb, fn || ('GIEO Gita Manchaster '+formattedDateTime+'.' + (type || 'xlsx')));
+        XLSX.writeFile(wb, fn || ('GIEO Gita Manchaster ' + formattedDateTime + '.' + (type || 'xlsx')));
     }
 
   </script>
