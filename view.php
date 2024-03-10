@@ -115,7 +115,9 @@ include 'partials/_db.php';
 
     // Output the current date and time to the console
     // formattedDateTime = formattedDateTime.substring(4, 14)
-    console.log("Current Date and Time:",typeof currentDate);
+    currentStamp =day+'-'+month+'-'+year+' '+hours+'-' + minutes;
+    console.log(currentStamp)
+    console.log("Current Date and Time:", currentDate);
     console.log("Current Date and Time:", formattedDateTime);
 
     var jsonString = JSON.stringify(currentDate);
@@ -127,7 +129,7 @@ include 'partials/_db.php';
       var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
       return dl ?
         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-        XLSX.writeFile(wb, fn || ('GIEO Gita Manchaster'+formattedDateTime+'.' + (type || 'xlsx')));
+        XLSX.writeFile(wb, fn || ('GIEO Gita Manchaster '+formattedDateTime+'.' + (type || 'xlsx')));
     }
 
   </script>
