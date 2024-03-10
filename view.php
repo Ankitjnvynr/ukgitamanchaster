@@ -76,19 +76,7 @@ include 'partials/_db.php';
             $num1++;
           }
         }
-
-
         ?>
-
-
-
-
-
-
-
-
-
-
       </tbody>
     </table>
 
@@ -100,12 +88,13 @@ include 'partials/_db.php';
 
     // You can then get various components of the date and time from this object
     var year = currentDate.getFullYear(); // Get the current year
-    var month = currentDate.getMonth() + 1; // Get the current month (0-11, so add 1 to get 1-12)
-    var day = currentDate.getDate(); // Get the current day of the month (1-31)
-    var hours = currentDate.getHours(); // Get the current hour (0-23)
-    var minutes = currentDate.getMinutes(); // Get the current minute (0-59)
-    var seconds = currentDate.getSeconds(); // Get the current second (0-59)
-    var milliseconds = currentDate.getMilliseconds(); // Get the current millisecond (0-999)
+    var month = currentDate.getMonth() + 1; 
+    var day = currentDate.getDate(); 
+    var hours = currentDate.getHours(); 
+    var minutes = currentDate.getMinutes(); 
+    var seconds = currentDate.getSeconds(); 
+    var milliseconds = currentDate.getMilliseconds(); 
+    
 
     // You can also get the entire date and time as a string
     var dateTimeString = currentDate.toString(); // Get the date and time in a string format

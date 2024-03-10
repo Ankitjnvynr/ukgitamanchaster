@@ -100,35 +100,8 @@
       }
     }
 
-    .logos {
-      height: 150px;
-      display: flex;
-      /* overflow-x: scroll; */
-      gap: 20px;
 
-      height: 100px;
 
-      transition: transform 7s ease-in-out;
-      position: relative;
-
-    }
-
-    .logos {
-      display: flex;
-      animation: all 3s;
-      animation: scroll 15s linear infinite;
-      /* Adjust duration as needed */
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-100%);
-      }
-    }
 
 
 
@@ -136,13 +109,28 @@
       position: relative;
     }
 
+    .logosp {
+      overflow: hidden;
+    }
+
+    .logos {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .logos img {
+      margin-right: 20px;
+      max-height: 70px;
+      border-radius: 5px;
+    }
+
     .logosp::before {
       content: '';
       position: absolute;
       background-color: red;
-      background: linear-gradient(to right, #f7e092 60%, rgba(0, 0, 0, 0));
+      background: linear-gradient(to right, #f7e092, rgba(0, 0, 0, 0));
       height: 200px;
-      width: 300px;
+      width: 50px;
       left: 0;
       top: 0;
       z-index: 20;
@@ -152,17 +140,12 @@
       content: '';
       position: absolute;
       background-color: red;
-      background: linear-gradient(to left, #f7e092 60%, rgba(0, 0, 0, 0));
+      background: linear-gradient(to left, #f7e092, rgba(0, 0, 0, 0));
       height: 200px;
-      width: 300px;
+      width: 50px;
       right: 0;
       top: 0;
       z-index: 20;
-    }
-
-    .logos img {
-      height: 100%;
-      border-radius: 10px;
     }
   </style>
   <link rel="stylesheet" href="style.css">
@@ -291,7 +274,7 @@
       </div>
     </div>
   </div>
-  <div style="overflow: hidden;" class="container-fluid mb-5  logosp">
+  <div class="container mb-5 logosp">
     <div id="logos" class="logos">
       <img src="logos/shree radhe krishn mandir.jpg" alt="logo1">
       <img src="logos/BHARTIYA VIDYA BHAVAN.jpg" alt="logo2">
@@ -299,7 +282,6 @@
       <img src="logos/jeeyar educational trust uk.jpg" alt="logo4">
       <img src="logos/MARATHI manchaster mandal.jpg" alt="logo5">
       <img src="logos/northwest dishasaaj.png" alt="logo6">
-
     </div>
   </div>
 
@@ -359,25 +341,46 @@
       });
     });
 
-    var logosContainer = document.getElementById('logos');
 
-    // Clone the children of the logos container
-    var logoChildren = logosContainer.children;
-    var logoCount = logoChildren.length;
 
-    // Iterate through the logo elements and duplicate them
-    for (var i = 0; i < logoCount; i++) {
-      var clonedLogo = logoChildren[i].cloneNode(true);
-      logosContainer.appendChild(clonedLogo);
-    }
 
-    // Optional JavaScript if you want to adjust the animation dynamically
-    var logos = document.getElementById('logos');
-    var logosWidth = logos.offsetWidth;
+    window.addEventListener('load', function () {
+      var logosContainer = document.getElementById('logos');
+      var logos = document.querySelectorAll('.logos img');
 
-    window.addEventListener('resize', function () {
-      // Recalculate the width of the logos container on window resize
-      logosWidth = logos.offsetWidth;
+      // Clone and append the logos to create an infinite loop
+      for (var i = 0; i < logos.length; i++) {
+        var clonedLogo = logos[i].cloneNode(true);
+        logosContainer.appendChild(clonedLogo);
+      }
+
+      // Scroll the logos horizontally
+      var scrollAmount = 1; // Adjust the scroll amount as needed
+      var interval = 20; // Adjust the interval duration as needed
+      var direction = 1; // -1 for left, 1 for right
+      var scrollInterval;
+
+      function scrollLogos() {
+        logosContainer.scrollLeft += scrollAmount * direction;
+        if (direction === -1 && logosContainer.scrollLeft <= 0) {
+          logosContainer.scrollLeft = logosContainer.scrollWidth / 2;
+        } else if (direction === 1 && logosContainer.scrollLeft >= logosContainer.scrollWidth / 2) {
+          logosContainer.scrollLeft = 0;
+        }
+      }
+
+      // Start the scrolling animation
+      scrollInterval = setInterval(scrollLogos, interval);
+
+      // Pause the animation when hovering over the logos
+      logosContainer.addEventListener('mouseenter', function () {
+        clearInterval(scrollInterval);
+      });
+
+      // Resume the animation when not hovering over the logos
+      logosContainer.addEventListener('mouseleave', function () {
+        scrollInterval = setInterval(scrollLogos, interval);
+      });
     });
 
 
