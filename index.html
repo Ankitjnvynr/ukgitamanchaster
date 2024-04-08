@@ -18,6 +18,8 @@
   <style>
     body {
       background: #f7e092;
+      background: rgb(247, 224, 146);
+      background: radial-gradient(circle, rgba(247, 224, 146, 1) 35%, rgba(223, 185, 56, 1) 100%);
     }
 
     .heading {
@@ -26,6 +28,15 @@
 
     .clr1 {
       color: #924500;
+    }
+
+    .videossection {
+      flex: 1 0 250px;
+    }
+
+    .videossection iframe {
+      aspect-ratio: 16/9;
+      border-radius: 10px;
     }
 
     .btn-bg {
@@ -158,6 +169,48 @@
 
 <body>
 
+  <!-- Modal -->
+  <div class="modal fade " id="volunteerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-warning-subtle">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><p class="heading fs-2 text-center  clr1">Become a Volunteer
+          </p></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form style="width: 100%" id="submitForm" action="" method="post">
+            <div class="text-center mb-2"><img width="100px" src="Logo.png" alt="GIEO Gita logo"></div>
+            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="country" placeholder="country" />
+              <label for="floatingPassword">Country</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="phone2" placeholder="Phone" />
+              <label for="floatingPassword">Phone</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Name" />
+              <label for="floatingPassword">Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3 text-center">
+              <button type="button" class="btn btn-primary btn-bg fs-5" id="submitBtn">Submit</button>
+            </div>
+            
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="overlay" id="overlay">
     <div class="popup">
@@ -167,50 +220,11 @@
       <a href='https://gieogita.org/'><button class="close-btn-below btn-bg" onclick="hidePopup()">Ok</button></a>
     </div>
   </div>
-  <div class="container mb-4">
 
-    <div class="row">
-      <div class="col-md d-flex justify-content-center align-items-center ">
-        <form style="width: 100%" id="submitForm" action="" method="post">
-          <p class="heading fs-2 text-center mb-5 clr1">‘GIEO Gita UK’
-            under guidance of H H Shri Swami Gyananandji Maharaj
-          </p>
-          <p class="heading fs-5  clr1">For information or to be part of the event please complete the form below:</p>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="country" placeholder="country" />
-            <label for="floatingPassword">Country</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="phone2" placeholder="Phone" />
-            <label for="floatingPassword">Phone</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name" placeholder="Name" />
-            <label for="floatingPassword">Name</label>
-          </div>
 
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <button type="button" class="btn btn-primary btn-bg fs-5" id="submitBtn">Submit</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="col-md">
-        <div>
-          <img style="width: 100%" src="banner new.png" alt="" />
-        </div>
-      </div>
-    </div>
+  <div class="heading my-3 text-center rounded-2 text-danger-emphasis ">
+    <h2 class="mt-2 container fw-semibold">OUR ORGANISATION</h2>
   </div>
-
-  <div class="heading mb-3 text-center rounded-2 text-danger-emphasis ">
-    <h2 class=" container fw-semibold">OUR PARTNERS</h2>
-  </div>
-
   <br>
   <div class="container mb-5 logosp">
     <div id="logos" class="logos">
@@ -229,7 +243,65 @@
 
 
 
-  <div class="container text-center">
+
+  <div class="container mb-4">
+
+    <div class="row">
+      <div class="col-md d-flex justify-content-center align-items-center ">
+        <div>
+          <form style="width: 100%" id="submitForm" action="" method="post">
+            <div class="text-center"><img width="100px" src="Logo.png" alt="GIEO Gita logo"></div>
+            <p class="heading fs-2 text-center mb-5 clr1">‘GIEO Gita UK’
+              under guidance of H H <br>Shri Swami Gyananandji Maharaj
+            </p>
+            <p class="heading fs-5  clr1">For information or to be part of the event please complete the form below:</p>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="country" placeholder="country" />
+              <label for="floatingPassword">Country</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="phone2" placeholder="Phone" />
+              <label for="floatingPassword">Phone</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Name" />
+              <label for="floatingPassword">Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <button type="button" class="btn btn-primary btn-bg fs-5" id="submitBtn">Submit</button>
+            </div>
+            <hr>
+          </form>
+          <button class="btn btn-primary btn-bg fs-5" id="submitBtn" data-bs-toggle="modal"
+            data-bs-target="#volunteerModal">Become An Volunteer</button>
+        </div>
+
+      </div>
+
+      <div class="col-md">
+        <div>
+          <img style="width: 100%" src="banner new.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div style="text-align:justify" class="container clr1 text-justify text-justify">
+    <h2 class="heading mb-2 mt-2 fw-semibold text-center">OVERVIEW</h2>
+    GIEO GITA UK (Global Inspiration Enlightenment Organisation of the Bhagwad Gita) is an extension of the International GIEO GITA organization based in India. Its main objective is to unite likeminded individuals worldwide who believe in the universality of the Bhagwad Gita's teachings. By bringing together people from diverse backgrounds, GIEO GITA UK aims to create an environment conducive to religious unity, universal brotherhood, and the welfare of all. The organization seeks to promote understanding and appreciation of the Bhagwad Gita's wisdom as a means to foster harmony among different religious communities. Through various activities such as seminars, workshops, and cultural events, GIEO GITA UK endeavors to spread the message of peace, compassion, and spiritual enlightenment embodied in the Bhagwad Gita. By emphasizing the common values shared by humanity, regardless of cultural or religious differences, GIEO GITA UK strives to build bridges of understanding and cooperation among people worldwide. Ultimately, the organization envisions a world where individuals can coexist peacefully, embracing diversity while working together for the betterment of society.
+  </div>
+
+
+  <div class="my-2">.</div>
+  <div class="container text-center mt-4">
     <div class="row mb-3 heading text-danger-emphasis ">
       <div class="col">
         <h2 class="heading mb-5 fw-semibold ">SUBJECT</h2>
@@ -256,25 +328,32 @@
   </div>
 
   <div class="container pt-3">
-    
-    
+
+
     <div class="heading mb-3 text-center rounded-2 text-danger-emphasis ">
       <h2 class=" container fw-semibold MY-2">VIDEOS</h2>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="row d-flex">
+      <div class="videossection col-md">
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="videossection col-md">
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="videossection col-md">
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5bLo08VHc?si=WGtIWVAMuxAfEm0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+
     </div>
   </div>
 
@@ -343,7 +422,7 @@
       for (var i = 0; i < logos.length; i++) {
         var clonedLogo = logos[i].cloneNode(true);
         logosContainer.appendChild(clonedLogo);
-        
+
       }
 
       // Scroll the logos horizontally
