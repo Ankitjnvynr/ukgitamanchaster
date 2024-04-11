@@ -1,3 +1,7 @@
+*{
+
+  cursor: url('bansuri-min.png'), auto;
+}
 body {
     font-family: sans-serif;
     font-size: larger;
@@ -342,3 +346,5 @@ body {
     cursor: pointer;
   }
   #vClose.show { display: block; }
+
+  
