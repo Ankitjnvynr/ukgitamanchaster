@@ -5,16 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gita Mahotsav UK : GIEO Gita</title>
-  <link rel="icon" type="image/x-icon"
-    href="https://gieogita.org/wp-content/uploads/2022/09/GieoGita_logo-removebg-preview.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="https://gieogita.org/wp-content/uploads/2022/09/GieoGita_logo-removebg-preview.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/style.css">
   <style>
     body {
       background: #f7e092;
@@ -170,8 +168,7 @@
 <body>
 
   <!-- Modal -->
-  <div class="modal fade " id="volunteerModal" data-bs-backdrop="static" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade " id="volunteerModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog ">
       <div class="modal-content bg-warning-subtle">
         <div class="modal-header">
@@ -214,23 +211,23 @@
             </div>
 
             <div class="form-floating mb-3">
-              <input type="tel" class="form-control" id="v-Telephone " name="v-Telephone" placeholder="name@example.com"
-                required />
+              <input type="text" class="form-control" id="v-organisation-name " name="v-organisation-name" placeholder="name@example.com" required />
+              <label for="v-organisation-name ">Organisation Name(Temple/Sanstha) </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="tel" class="form-control" id="v-Telephone " name="v-Telephone" placeholder="name@example.com" required />
               <label for="v-Telephone ">Telephone </label>
             </div>
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="v-email" name="v-email" placeholder="name@example.com"
-                required />
+              <input type="email" class="form-control" id="v-email" name="v-email" placeholder="name@example.com" required />
               <label for="v-email">Email address</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="v-sewa1" name="v-sewa1" placeholder="name@example.com"
-                required />
+              <input type="text" class="form-control" id="v-sewa1" name="v-sewa1" placeholder="name@example.com" required />
               <label for="v-sewa1">Sewa Preference 1</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="v-sewa2" name="v-sewa2" placeholder="name@example.com"
-                required />
+              <input type="text" class="form-control" id="v-sewa2" name="v-sewa2" placeholder="name@example.com" required />
               <label for="v-sewa2">Sewa Preference 2</label>
             </div>
             <div class="form-floating mb-3 text-center">
@@ -319,8 +316,7 @@
           <div class="mb-3">
             <button class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#volunteerModal">Become
               A Volunteer</button>
-            <button class="btn btn-primary btn-bg fs-6 " data-jg-donate-button data-charityId="3576214"
-              data-marketCode="GB" data-linkType="givingCheckout">Donate Now</button>
+            <button class="btn btn-primary btn-bg fs-6 " data-jg-donate-button data-charityId="3576214" data-marketCode="GB" data-linkType="givingCheckout">Donate Now</button>
           </div>
         </div>
 
@@ -383,52 +379,43 @@
       </div>
     </div>
   </div>
-  <style>
-    .swiper {
-      width: 600px;
-      height: 300px;
-    }
-  </style>
+ 
+
+
+
+
+
   <div class="container">
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img height="150px" src="logos/kv logo.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img height="150px" src="logos/ram sound logo.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img height="70px" src="logos/bigbyte logo.png" alt="">
-        </div>
-        ...
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper ">
+        
+        <?php
+        // Directory containing images
+        $imageDir = "partners/";
+
+        // Get all files in the directory
+        $files = scandir($imageDir);
+
+        // Loop through each file
+        foreach ($files as $file) {
+          // Get the file extension
+          $extension = pathinfo($file, PATHINFO_EXTENSION);
+
+          // Check if the file is an image
+          if (in_array($extension, array("jpg", "jpeg", "png", "gif"))) {
+            // Display the image
+            echo '<div height="150px" class="swiper-slide d-flex align-items-center"><img    src=" '.$imageDir.$file.'" alt="'.$file.'"></div>';
+            echo "";
+          }
+        }
+        ?>
+
       </div>
-      <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
-  <div class="container-fluid bg-light py-4">
-    <div class="container  my-5">
-      <h2 class=" container text-center fw-semibold MY-2">OUR PARTNERS</h2>
-      <div class="d-flex gap-5 align-items-center justify-content-center">
-        <img height="150px" src="logos/kv logo.jpg" alt="">
-        <img height="150px" src="logos/ram sound logo.png" alt="">
-        <img height="70px" src="logos/bigbyte logo.png" alt="">
-      </div>
-    </div>
-  </div>
-
-  <div class="container pt-3">
+  <div class="container my-2 py-3">
 
 
     <div class="heading mb-3 text-center rounded-2 text-danger-emphasis ">
@@ -437,130 +424,37 @@
 
     <div class="row d-flex">
       <div class="videossection col-md bg">
-        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Ufgu8-Nhkcs?si=nQaNOHW3f4JDQ7U-"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sNarIn_uuO4?si=QpMjZnVK8c4olYLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="videossection col-md bg">
-        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uXGwPNiuXg4?si=GkYbyVbS9A-t6K4t"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/VtcM15YOnd0?si=Rti4V9GTHwsnvCl9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div class="videossection col-md bg">
-        <iframe width="100%" height="auto"
-          src="https://www.youtube.com/embed/FpSkXtEmFRk?si=yOq1dgNDQKG0iOBm&amp;start=54" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/CZah0vZifFI?si=gUrIo4T77pJkiMlm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-
+    </div>
+  </div>
+  <!-- =========================Social icons ========================================== -->
+  <div class="container-fluid bg-light py-4">
+    <div class="container  my-5">
+      <h2 class="heading container text-center fw-semibold MY-2 ">CONNECT WITH SOCIAL MEDIA</h2>
+      <div class="d-flex gap-5 align-items-center justify-content-center clr1">
+        <a target="_blank" href="https://www.facebook.com/GitaManishi"><i class="fa-brands fa-facebook clr1 btn fs-1"></i></a>
+        <a target="_blank" href="https://www.instagram.com/gieo_gita_uk/"><i class="fa-brands fa-instagram clr1 btn fs-1"></i></a>
+      </div>
     </div>
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
 
 
-  <script>
 
-    function showPopup(a) {
-      if (a == 'done') {
-        document.getElementById("overlay").style.display = "flex";
-      } else {
-        document.getElementById("overlay2").style.display = "flex";
-      }
-    }
-
-    function hidePopup() {
-      document.getElementById("overlay").style.display = "none";
-    }
-    $(document).ready(function () {
-      $('#submitBtn').click(function () {
-        var country = $('#country').val();
-        var phone2 = $('#phone2').val();
-        var name = $('#name').val();
-        var email = $('#floatingInput').val();
-
-        $.ajax({
-          type: 'POST',
-          url: 'partials/submit_form.php',
-          data: {
-            country: country,
-            phone2: phone2,
-            name: name,
-            email: email
-          },
-          success: function (response) {
-            if (response == 'done') {
-              showPopup(response)
-              document.getElementById("submitForm").reset();
-            }
-            console.log(response);
-            // You can update the UI or show a success message here
-          },
-          error: function (error) {
-            console.log(error);
-            // Handle errors if any
-          }
-        });
-      });
-    });
-
-
-    window.addEventListener('load', function () {
-      var logosContainer = document.getElementById('logos');
-      var logos = document.querySelectorAll('.logos img');
-
-      // Clone and append the logos to create an infinite loop
-      for (var i = 0; i < logos.length; i++) {
-        var clonedLogo = logos[i].cloneNode(true);
-        logosContainer.appendChild(clonedLogo);
-
-      }
-
-      // Scroll the logos horizontally
-      var scrollAmount = 1; // Adjust the scroll amount as needed
-      var interval = 20; // Adjust the interval duration as needed
-      var direction = 1; // -1 for left, 1 for right
-      var scrollInterval;
-
-      function scrollLogos() {
-        logosContainer.scrollLeft += scrollAmount * direction;
-        if (direction === -1 && logosContainer.scrollLeft <= 0) {
-          logosContainer.scrollLeft = logosContainer.scrollWidth / 2;
-        } else if (direction === 1 && logosContainer.scrollLeft >= logosContainer.scrollWidth / 2) {
-          logosContainer.scrollLeft = 0;
-        }
-      }
-
-      // Start the scrolling animation
-      scrollInterval = setInterval(scrollLogos, interval);
-
-      // Pause the animation when hovering over the logos
-      logosContainer.addEventListener('mouseenter', function () {
-        clearInterval(scrollInterval);
-      });
-
-      // Resume the animation when not hovering over the logos
-      logosContainer.addEventListener('mouseleave', function () {
-        scrollInterval = setInterval(scrollLogos, interval);
-      });
-    });
-
-
-  </script>
 
 
 
@@ -570,8 +464,7 @@
 
   <script src="js/script.js"></script>
 
-  <script src="https://www.justgiving.com/widgets/scripts/widget.js" data-version="2" data-widgetType="attachCheckout"
-    type="text/javascript"></script>
+  <script src="https://www.justgiving.com/widgets/scripts/widget.js" data-version="2" data-widgetType="attachCheckout" type="text/javascript"></script>
   <script>
 
   </script>
