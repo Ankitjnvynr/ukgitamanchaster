@@ -12,156 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      background: #f7e092;
-      background: rgb(247, 224, 146);
-      background: radial-gradient(circle, rgba(247, 224, 146, 1) 35%, rgba(223, 185, 56, 1) 100%);
-    }
 
-    .heading {
-      font-family: 'Ubuntu', sans-serif;
-    }
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    .clr1 {
-      color: #924500;
-    }
-
-    .videossection {
-      flex: 1 0 250px;
-    }
-
-    .videossection iframe {
-      aspect-ratio: 16/9;
-      border-radius: 10px;
-    }
-
-    .btn-bg {
-      background-color: #924500;
-      outline: none;
-      border: none;
-    }
-
-    .btn-bg:hover {
-      background-color: #612d00;
-    }
-
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-    }
-
-    /* Styles for the popup container */
-    .popup {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      position: relative;
-      animation: scaleUp 0.3s ease-in-out;
-      z-index: 102;
-    }
-
-    /* Styles for the close button */
-    .close-btn {
-      cursor: pointer;
-      color: #555;
-      font-size: 20px;
-      position: absolute;
-      top: 10px;
-      right: 15px;
-    }
-
-    .close-btn-below {
-
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    /* Styles for the tick mark */
-    .tick-mark {
-      color: #4CAF50;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    /* Animation keyframes */
-    @keyframes scaleUp {
-      0% {
-        transform: scale(0.7);
-        opacity: 0;
-      }
-
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    .logosp {
-      position: relative;
-    }
-
-    .logosp {
-      overflow: hidden;
-    }
-
-    .logos {
-      display: flex;
-      overflow: hidden;
-    }
-
-    .logos img {
-      margin-right: 20px;
-      max-height: 70px;
-      border-radius: 5px;
-    }
-
-    .logosp::before {
-      content: '';
-      position: absolute;
-      background-color: red;
-      background: linear-gradient(to right, #f7e092, rgba(0, 0, 0, 0));
-      height: 200px;
-      width: 50px;
-      left: 0;
-      top: 0;
-      z-index: 20;
-    }
-
-    .logosp::after {
-      content: '';
-      position: absolute;
-      background-color: red;
-      background: linear-gradient(to left, #f7e092, rgba(0, 0, 0, 0));
-      height: 200px;
-      width: 50px;
-      right: 0;
-      top: 0;
-      z-index: 20;
-    }
-
-    .bg:hover {
-      scale: 1.05;
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  
+  <script src="https://www.justgiving.com/widgets/scripts/widget.js" data-version="2" data-widgetType="attachCheckout" type="text/javascript"></script>
+  <script src="js/script.js"></script>
+
+
+  <link rel="stylesheet" href="css/style.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -181,7 +46,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form style="width: 100%" id="v-submitForm" action="" method="post">
+          <form style="width: 100%" id="vsubmitForm" action="" method="post">
 
 
             <div class="form-floating mb-3">
@@ -201,11 +66,11 @@
                 Affiliated organisation
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="organisation" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="organisation" id="inlineRadio1" value="Temple">
                 <label class="form-check-label" for="inlineRadio1">Temple </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="organisation" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="radio" name="organisation" id="inlineRadio2" value="Sanstha">
                 <label class="form-check-label" for="inlineRadio2">Sanstha </label>
               </div>
             </div>
@@ -231,7 +96,7 @@
               <label for="v-sewa2">Sewa Preference 2</label>
             </div>
             <div class="form-floating mb-3 text-center">
-              <button type="button" class="btn btn-primary btn-bg fs-5" id="submitBtn">Submit</button>
+              <button type="submit" class="btn btn-primary btn-bg fs-5" data-bs-toggle="modal" data-bs-target="#volunteerModal" id="vsubmitBtn">Submit</button>
             </div>
 
           </form>
@@ -259,22 +124,18 @@
   <br>
   <div class="container mb-5 logosp">
     <div id="logos" class="logos">
-      <img src="logos/shree radhe krishn mandir.jpg" alt="logo1">
-      <img src="logos/BHARTIYA VIDYA BHAVAN.jpg" alt="logo2">
-      <img src="logos/insight uk.jpg" alt="logo3">
-      <img src="logos/MARATHI manchaster mandal.jpg" alt="logo5">
-      <img src="logos/northwest dishasaaj.png" alt="logo6">
-      <img src="logos/Bengali hindu adarsha sangha uk.jpg" alt="logo7">
-      <img src="logos/BHF-Radio.jpg" alt="logo8">
-      <img src="logos/bolton-hindu.jpg" alt="logo9">
-      <img src="logos/indian-association.jpg" alt="logo10">
-      <img src="logos/kaho.jpg" alt="logo11">
-      <img src="logos/kannada-sangha.jpg" alt="logo12">
-      <img src="logos/MTM logo.jpg" alt="logo13">
-      <img src="logos/jeeyar educational trust uk.jpg" alt="logo4">
-      <img src="logos/Sewa-day.jpg" alt="logo14">
-      <img src="logos/north-west-marathi.jpg" alt="logo15">
-      <img src="logos/om logo.jpg" alt="logo16">
+    <?php
+        $imageDir = "logos/";
+        $files = scandir($imageDir);
+        foreach ($files as $file) {
+          $extension = pathinfo($file, PATHINFO_EXTENSION);
+          if (in_array($extension, array("jpg", "jpeg", "png", "gif"))) {
+            echo '<img    src=" '.$imageDir.$file.'" alt="'.$file.'">';
+            
+          }
+        }
+        ?>
+      
     </div>
   </div>
 
@@ -385,27 +246,22 @@
 
 
 
-  <div class="container">
+  <div class="container my-3">
+  <div class="heading mb-3 text-center rounded-2 text-danger-emphasis ">
+      <h2 class=" container fw-semibold MY-2">OUR PARTNERS</h2>
+    </div>
     <!-- Swiper -->
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper ">
+      <div class="swiper-wrapper">
         
         <?php
-        // Directory containing images
         $imageDir = "partners/";
-
-        // Get all files in the directory
         $files = scandir($imageDir);
-
-        // Loop through each file
         foreach ($files as $file) {
-          // Get the file extension
           $extension = pathinfo($file, PATHINFO_EXTENSION);
-
-          // Check if the file is an image
           if (in_array($extension, array("jpg", "jpeg", "png", "gif"))) {
             // Display the image
-            echo '<div height="150px" class="swiper-slide d-flex align-items-center"><img    src=" '.$imageDir.$file.'" alt="'.$file.'"></div>';
+            echo '<div height="150px" style="background:transperent !important " class="swiper-slide  d-flex align-items-center"><img    src=" '.$imageDir.$file.'" alt="'.$file.'"></div>';
             echo "";
           }
         }
@@ -447,27 +303,12 @@
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
 
 
 
 
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script src="js/script.js"></script>
-
-  <script src="https://www.justgiving.com/widgets/scripts/widget.js" data-version="2" data-widgetType="attachCheckout" type="text/javascript"></script>
-  <script>
-
-  </script>
 
 
 
