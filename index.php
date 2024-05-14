@@ -47,8 +47,6 @@
         </div>
         <div class="modal-body">
           <form style="width: 100%" id="vsubmitForm" action="" method="post">
-
-
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="v-name" name="v-name" placeholder="country" required />
               <label for="v-name">Full Name</label>
@@ -96,7 +94,7 @@
               <label for="v-sewa2">Sewa Preference 2</label>
             </div>
             <div class="form-floating mb-3 text-center">
-              <button type="submit" class="btn btn-primary btn-bg fs-5" data-bs-toggle="modal" data-bs-target="#volunteerModal" id="vsubmitBtn">Submit</button>
+              <button type="submit" class="btn btn-primary btn-bg fs-5" id="vsubmitBtn">Submit</button>
             </div>
 
           </form>

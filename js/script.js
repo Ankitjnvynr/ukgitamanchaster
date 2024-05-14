@@ -1,5 +1,40 @@
 
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 40,
+    grabCursor: true,
+    a11y: false,
+    freeMode: true,
+    speed: 11000,
+    loop: true,
 
+    autoplay: {
+      delay: 0.5,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: { /* when window >=0px - webflow mobile landscape/portriat */
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      480: { /* when window >=0px - webflow mobile landscape/portriat */
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      767: { /* when window >= 767px - webflow tablet */
+        spaceBetween: 10,
+        slidesPerView: 3,
+      },
+      992: { /* when window >= 988px - webflow desktop */
+        spaceBetween: 10,
+        slidesPerView: 4,
+      }
+    },
+  });
+});
+
+
+const volunteerModal = new bootstrap.Modal(document.getElementById('volunteerModal'));
 function showPopup(a) {
   if (a == 'done') {
     document.getElementById("overlay").style.display = "flex";
@@ -111,39 +146,7 @@ window.addEventListener('load', function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 40,
-    grabCursor: true,
-    a11y: false,
-    freeMode: true,
-    speed: 11000,
-    loop: true,
-    
-    autoplay: {
-      delay: 0.5,
-      disableOnInteraction: false,
-       },
-     breakpoints: {
-      0: { /* when window >=0px - webflow mobile landscape/portriat */
-        spaceBetween: 10,
-        slidesPerView: 1,
-      },
-          480: { /* when window >=0px - webflow mobile landscape/portriat */
-        spaceBetween: 10,
-        slidesPerView: 2,
-      },
-      767: { /* when window >= 767px - webflow tablet */
-        spaceBetween: 10,
-        slidesPerView: 3,
-      },
-      992: { /* when window >= 988px - webflow desktop */
-        spaceBetween: 10,
-        slidesPerView: 4,
-      }
-    },
-});
-});
+
 
 
 
