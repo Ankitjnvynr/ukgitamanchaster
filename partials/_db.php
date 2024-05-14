@@ -12,7 +12,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db="ukgita";
+$db="ukgieo";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$db);

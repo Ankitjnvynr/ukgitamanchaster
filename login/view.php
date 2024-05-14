@@ -1,20 +1,15 @@
 <?php
-include 'partials/_db.php';
 
-$show = false;
-$wrongkey = "";
-
-if (isset($_POST['submitkey'])) {
-
-  if ($_POST['passkey'] == "ankit") {
-    $show = true;
-  } else {
-    $wrongkey = "Wrong Passkey!";
-  }
-
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true)
+{
+    header("location: index.php");
+    exit;
 }
+include '../partials/_db.php';
 
 
+$show = true;
 
 ?>
 
@@ -27,7 +22,7 @@ if (isset($_POST['submitkey'])) {
   <title>GIEO Gita Manchaster</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 
 
@@ -36,30 +31,18 @@ if (isset($_POST['submitkey'])) {
 
 <body>
   <?php
-  include 'partials/_header.php';
+  include '../partials/_header.php';
   ?>
-
-  <div class="container my-4">
-    <form action="" method="POST" class="d-flex flex-row  align-items-center justify-content-center ">
-      <div class="mb-3 flex-fill ">
-        <label for="exampleInputEmail1" class="form-label">Passkey</label>
-        <input type="text" name="passkey" required class="form-control" id="exampleInputEmail1"
-          aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Enter the passkey to view.</div>
-      </div>
-
-      <div><button type="submit" name="submitkey" class="btn btn-primary mx-2 mb-2">Submit</button></div>
-    </form>
-    <p class="text-center text-danger">
-      <?php echo $wrongkey ?>
-    </p>
+<div class="container mt-2">
+  <div class="sticky d-flex justify-content-between">
+    <span>
+    <a href="view.php" class="btn btn-danger">Form Data</a>
+    <a href="volunteer.php" class="btn btn-danger">Volunteer Data</a>
+  </span>
+  <a href="logout.php" class="btn btn-danger">Logout ></a>
   </div>
-  <div class="container">
-    <hr>
-  </div>
-
-
-  <div class="container">
+</div>
+  <div class="container mt-4 overflow-x-scroll">
 
     <?php
       if($show){
