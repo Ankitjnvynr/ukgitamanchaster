@@ -47,6 +47,7 @@ $show = true;
           <th scope="col">sr</th>
           <th scope="col">Name</th>
           <th scope="col">Age</th>
+          <th scope="col">Firstly Aider?</th>
           <th scope="col">City</th>
           <th scope="col">Organisation</th>
           <th scope="col">Organisation Name</th>
@@ -88,6 +89,7 @@ $show = true;
               <th scope='row'>" . $num1 . "</th>
               <td>" . $row['name'] . "</td>
               <td>" . $row['age'] . "</td>
+              <td>" . $row['aider'] . "</td>
               <td>" . $row['city'] . "</td>
               <td>" . $row['organisation'] . "</td>
               <td>" . $row['organisation_name'] . "</td>
@@ -158,7 +160,8 @@ $show = true;
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 
 </body>
 

@@ -27,6 +27,7 @@ try {
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escape user inputs for security
+    $aider = $conn->real_escape_string($_POST['v-aider']);
     $name = $conn->real_escape_string($_POST['v-name']);
     $age = $conn->real_escape_string($_POST['v-age']);
     $city = $conn->real_escape_string($_POST['v-city']);
@@ -38,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sewa2 = $conn->real_escape_string($_POST['v-sewa2']);
 
     // Attempt insert query execution
-    $sql = "INSERT INTO volunteer_data (name, age, city, organisation, organisation_name, telephone, email, sewa1, sewa2) 
-            VALUES ('$name', '$age', '$city', '$organisation', '$organisation_name', '$telephone', '$email', '$sewa1', '$sewa2')";
+    $sql = "INSERT INTO volunteer_data (name, age,aider, city, organisation, organisation_name, telephone, email, sewa1, sewa2) 
+            VALUES ('$name', '$age','$aider', '$city', '$organisation', '$organisation_name', '$telephone', '$email', '$sewa1', '$sewa2')";
     if ($conn->query($sql) === true) {
         echo 'done';
     } else {
@@ -49,4 +50,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-

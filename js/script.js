@@ -41,6 +41,36 @@ $(document).ready(function () {
       }
     });
   });
+
+  var modal = document.getElementById('volunteerModal');
+  // volunteer form submissiobn
+  $('#vsubmitForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    
+    // Serialize form data
+    var formData = $(this).serialize();
+    
+    // AJAX request
+    $.ajax({
+        type: 'POST', // Or 'GET' depending on your server-side handling
+        url: 'partials/volunteerSubmit.php', 
+        data: formData,
+        success: function(response) {
+          
+          $('#volunTrigger').click();
+          
+          if (response == 'done') {
+            showPopup(response)
+            document.getElementById("vsubmitForm").reset();
+          }
+          console.log(response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error submitting form:", error);
+            // Handle error response here if needed
+        }
+    });
+});
 });
 
 
@@ -87,24 +117,6 @@ window.addEventListener('load', function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-});
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 40,
     grabCursor: true,
@@ -137,3 +149,49 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+
+// popup js
+
+  // Function to display the popup after 3 seconds
+  function displayPopup() {
+    setTimeout(function() {
+      document.getElementById('popupImage').style.display = 'block';
+      document.getElementsByClassName('backdrop')[0].style.display = 'block';
+      
+    }, 1000); // 3000 milliseconds = 3 seconds
+  }
+
+  // Call the displayPopup function when the window loads
+displayPopup();
+
+// JavaScript to close the popup
+function closePopup() {
+  document.getElementById('popupImage').style.display = 'none';
+  document.getElementsByClassName('backdrop')[0].style.display = 'none';
+}
+
+
+$(document).ready(function() {
+      $('#sponcerForm').submit(function(event) {
+          event.preventDefault(); // Prevent default form submission
+  
+          // Get form data
+          var formData = $(this).serialize();
+  
+          // AJAX call to submit form data
+          $.ajax({
+              type: 'POST',
+              url: 'submit_form.php',
+              data: formData,
+              success: function(response) {
+                  // Handle success response
+                  console.log(response);
+              },
+              error: function(xhr, status, error) {
+                  // Handle error
+                  console.error(xhr.responseText);
+              }
+          });
+      });
+  });
