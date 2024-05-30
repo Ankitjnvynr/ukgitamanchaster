@@ -71,6 +71,35 @@ $(document).ready(function () {
         }
     });
 });
+
+
+  $('#sponsorForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    
+    // Serialize form data
+    var formData = $(this).serialize();
+    
+    // AJAX request
+    $.ajax({
+        type: 'POST', // Or 'GET' depending on your server-side handling
+        url: 'partials/sponserSubmit.php', 
+        data: formData,
+        success: function(response) {
+          
+          // $('#volunTrigger').click();
+          
+          if (response == 'done') {
+            showPopup(response)
+            document.getElementById("vsubmitForm").reset();
+          }
+          console.log(response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error submitting form:", error);
+            // Handle error response here if needed
+        }
+    });
+});
 });
 
 
@@ -172,26 +201,3 @@ function closePopup() {
 }
 
 
-$(document).ready(function() {
-      $('#sponcerForm').submit(function(event) {
-          event.preventDefault(); // Prevent default form submission
-  
-          // Get form data
-          var formData = $(this).serialize();
-  
-          // AJAX call to submit form data
-          $.ajax({
-              type: 'POST',
-              url: 'submit_form.php',
-              data: formData,
-              success: function(response) {
-                  // Handle success response
-                  console.log(response);
-              },
-              error: function(xhr, status, error) {
-                  // Handle error
-                  console.error(xhr.responseText);
-              }
-          });
-      });
-  });

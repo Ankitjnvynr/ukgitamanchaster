@@ -47,15 +47,9 @@ $show = true;
         <tr>
           <th scope="col">sr</th>
           <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Firstly Aider?</th>
-          <th scope="col">City</th>
-          <th scope="col">Organisation</th>
-          <th scope="col">Organisation Name</th>
-          <th scope="col">Telephone</th>
           <th scope="col">Email</th>
-          <th scope="col">Sewa 1</th>
-          <th scope="col">Sewa 2</th>
+          <th scope="col">Phone</th>
+         
       </thead>
       <tbody>
         
@@ -63,7 +57,7 @@ $show = true;
         }
         ?>
         <?php
-        $sql = "SELECT * FROM `volunteer_data`";
+        $sql = "SELECT * FROM `our_sponsors`";
         $result = mysqli_query($conn, $sql);
 
         // Find the number of records returned
@@ -89,15 +83,9 @@ $show = true;
                     echo "<tr>
               <th scope='row'>" . $num1 . "</th>
               <td>" . $row['name'] . "</td>
-              <td>" . $row['age'] . "</td>
-              <td>" . $row['aider'] . "</td>
-              <td>" . $row['city'] . "</td>
-              <td>" . $row['organisation'] . "</td>
-              <td>" . $row['organisation_name'] . "</td>
-              <td>" . $row['telephone'] . "</td>
               <td>" . $row['email'] . "</td>
-              <td>" . $row['sewa1'] . "</td>
-              <td>" . $row['sewa2'] . "</td>
+              <td>" . $row['phone'] . "</td>
+              
               
             </tr>";
                 }

@@ -1,10 +1,9 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true)
-{
-    header("location: index.php");
-    exit;
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+  header("location: index.php");
+  exit;
 }
 include '../partials/_db.php';
 
@@ -20,8 +19,7 @@ $show = true;
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GIEO Gita Manchaster</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="../style.css">
   <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 
@@ -33,20 +31,21 @@ $show = true;
   <?php
   include '../partials/_header.php';
   ?>
-<div class="container mt-2">
-  <div class="sticky d-flex justify-content-between">
-    <span>
-    <a href="view.php" class="btn btn-danger">Form Data</a>
-    <a href="volunteer.php" class="btn btn-danger">Volunteer Data</a>
-  </span>
-  <a href="logout.php" class="btn btn-danger">Logout ></a>
+  <div class="container mt-2">
+    <div class="sticky d-flex justify-content-between">
+      <span>
+        <a href="view.php" class="btn btn-danger">Form Data</a>
+        <a href="volunteer.php" class="btn btn-danger">Volunteer Data</a>
+        <a href="sponsers.php" class="btn btn-danger">Sponser Data</a>
+      </span>
+      <a href="logout.php" class="btn btn-danger">Logout ></a>
+    </div>
   </div>
-</div>
   <div class="container mt-4 overflow-x-scroll">
 
     <?php
-      if($show){
-        echo '
+    if ($show) {
+      echo '
         <table class="table" id="tbl_exporttable_to_xls">
       <thead>
         <tr>
@@ -59,39 +58,39 @@ $show = true;
       <tbody>
         
         ';
-      }
+    }
     ?>
 
 
 
-        <?php
+    <?php
 
 
 
-        $sql = "SELECT * FROM `form_submissions`";
-        $result = mysqli_query($conn, $sql);
+    $sql = "SELECT * FROM `form_submissions`";
+    $result = mysqli_query($conn, $sql);
 
-        // Find the number of records returned
-        $num = mysqli_num_rows($result);
-        if ($show)
-          echo "Total " . $num . " Entries found<br>";
-        // echo " Entry Found <br>";
-        $in = "'";
-        
-          $gg= '<button class="btn btn-primary my-3" onclick="ExportToExcel('.$in.'xlsx'.$in.')">Download Excel sheet </button>';
-         if($show) echo $gg;
-        
-        ?>
-        <?php
-        // Display the rows returned by the sql query
-        if ($num > 0) {
-          $num1 = 1;
-          // We can fetch in a better way using the while loop
-          while ($row = mysqli_fetch_assoc($result)) {
-            // echo var_dump($row);
-            //echo $row['name'] .  ". Hello ". $row['phone'] ." Welcome to ". $row['email'] ."on".$row['date'];
-            if ($show) {
-              echo "<tr>
+    // Find the number of records returned
+    $num = mysqli_num_rows($result);
+    if ($show)
+      echo "Total " . $num . " Entries found<br>";
+    // echo " Entry Found <br>";
+    $in = "'";
+
+    $gg = '<button class="btn btn-primary my-3" onclick="ExportToExcel(' . $in . 'xlsx' . $in . ')">Download Excel sheet </button>';
+    if ($show) echo $gg;
+
+    ?>
+    <?php
+    // Display the rows returned by the sql query
+    if ($num > 0) {
+      $num1 = 1;
+      // We can fetch in a better way using the while loop
+      while ($row = mysqli_fetch_assoc($result)) {
+        // echo var_dump($row);
+        //echo $row['name'] .  ". Hello ". $row['phone'] ." Welcome to ". $row['email'] ."on".$row['date'];
+        if ($show) {
+          echo "<tr>
               <th scope='row'>" . $num1 . "</th>
               <td>" . $row['country'] . "</td>
               <td>" . $row['name'] . "</td>
@@ -99,18 +98,18 @@ $show = true;
               <td>" . $row['email'] . "</td>
               
             </tr>";
-            }
-            $num1++;
-          }
         }
-        ?>
-      <?php
-        if($show){
-          echo '
+        $num1++;
+      }
+    }
+    ?>
+    <?php
+    if ($show) {
+      echo '
           </tbody>
     </table>';
-        }
-      ?>
+    }
+    ?>
 
   </div>
 
@@ -137,28 +136,32 @@ $show = true;
     // Output the current date and time to the console
     // formattedDateTime = formattedDateTime.substring(4, 14)
     currentStamp = day + '-' + month + '-' + year + ' ' + hours + '-' + minutes;
-    
+
 
     var jsonString = JSON.stringify(currentDate);
-    
+
 
 
     function ExportToExcel(type, fn, dl) {
       var elt = document.getElementById('tbl_exporttable_to_xls');
-      var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+      var wb = XLSX.utils.table_to_book(elt, {
+        sheet: "sheet1"
+      });
       return dl ?
-        XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+        XLSX.write(wb, {
+          bookType: type,
+          bookSST: true,
+          type: 'base64'
+        }) :
         XLSX.writeFile(wb, fn || ('GIEO Gita Manchaster ' + formattedDateTime + '.' + (type || 'xlsx')));
     }
-
   </script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+  </script>
 
 </body>
 
