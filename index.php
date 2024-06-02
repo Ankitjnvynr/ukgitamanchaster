@@ -230,7 +230,7 @@
                         <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#volunteerModal">Become
                             a Volunteer</button>
                         <button class="btn btn-primary btn-bg fs-6 " data-jg-donate-button data-charityId="3576214" data-marketCode="GB" data-linkType="givingCheckout">Donate Now</button>
-                        <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#sponserModal">Become a Sponsor</button>
+                        <button id="sponsorTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#sponserModal">Become a Sponsor</button>
                     </div>
                 </div>
 

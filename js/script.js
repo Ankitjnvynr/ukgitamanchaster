@@ -86,7 +86,7 @@ $(document).ready(function () {
         data: formData,
         success: function(response) {
           
-          $('#volunTrigger').click();
+          $('#sponsorTrigger').click();
           
           if (response == 'done') {
             showPopup(response)
