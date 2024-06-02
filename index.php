@@ -204,21 +204,21 @@
                         <p class="heading fs-6  clr1">For information or to be part of the event please complete the
                             form below:</p>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Name" />
+                            <input type="text" class="form-control" id="name" placeholder="Name"  required />
                             <label for="floatingPassword">Name</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="country" placeholder="country" />
+                            <input type="text" class="form-control" id="country" placeholder="country"  required />
                             <label for="floatingPassword">Country</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="phone2" placeholder="Phone" />
+                            <input type="text" class="form-control" id="phone2" placeholder="Phone"  required />
                             <label for="floatingPassword">Phone</label>
                         </div>
 
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -228,9 +228,9 @@
                     </form>
                     <div class="mb-3 d-flex gap-2 flex-wrap">
                         <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#volunteerModal">Become
-                            A Volunteer</button>
+                            a Volunteer</button>
                         <button class="btn btn-primary btn-bg fs-6 " data-jg-donate-button data-charityId="3576214" data-marketCode="GB" data-linkType="givingCheckout">Donate Now</button>
-                        <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#sponserModal">Become a sponser</button>
+                        <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#sponserModal">Become a Sponsor</button>
                     </div>
                 </div>
 

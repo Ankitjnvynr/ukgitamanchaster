@@ -86,11 +86,11 @@ $(document).ready(function () {
         data: formData,
         success: function(response) {
           
-          // $('#volunTrigger').click();
+          $('#volunTrigger').click();
           
           if (response == 'done') {
             showPopup(response)
-            document.getElementById("vsubmitForm").reset();
+            document.getElementById("sponsorForm").reset();
           }
           console.log(response);
         },
