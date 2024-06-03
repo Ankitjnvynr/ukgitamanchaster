@@ -226,7 +226,7 @@
                         </div>
                         <hr>
                     </form>
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex gap-2 flex-wrap">
                         <button id="volunTrigger" class="btn btn-primary btn-bg fs-6 " data-bs-toggle="modal" data-bs-target="#volunteerModal">Become
                             A Volunteer</button>
                         <button class="btn btn-primary btn-bg fs-6 " data-jg-donate-button data-charityId="3576214" data-marketCode="GB" data-linkType="givingCheckout">Donate Now</button>
@@ -275,15 +275,15 @@
     <div class="my-2">.</div>
     <div class="container text-center mt-4">
         <div class="row mb-3 heading text-danger-emphasis ">
-            <div class="col">
-                <h2 class="heading mb-5 fw-semibold ">SUBJECT</h2>
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">SUBJECT</h2>
                 <div class="border border-3 p-3 bg-warning-subtle bg">Three-Day Multi-Faith Cultural Event – The
                     Manchester Gita
                     Festival - Promoting Peace, Love, and Harmony inspired by the teachings of the Bhagwad Gita.</div>
 
             </div>
-            <div class="col">
-                <h2 class="heading mb-5 fw-semibold ">AIM</h2>
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">AIM</h2>
                 <div class="border border-3 p-3 bg-warning-subtle bg">Our aim is to create a platform that brings
                     together
                     diverse communities, fostering understanding and unity through the shared principles found in the
@@ -291,8 +291,8 @@
                     Gita. This event will feature enlightening discussions, cultural performances, and interact.</div>
 
             </div>
-            <div class="col">
-                <h2 class="heading mb-5 fw-semibold ">DESCRIPTION</h2>
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">DESCRIPTION</h2>
                 <div class="border border-3 p-3 bg-warning-subtle bg">GIEO GITA UK (Global Inspiration Enlightenment
                     Organisation of the Bhagwad Gita) is an extension of the International GIEO GITA organisation based
                     in India.
@@ -310,9 +310,9 @@
 
 
 
-    <div class="container my-3">
-        <div class="heading mb-3 text-center rounded-2 text-danger-emphasis ">
-            <h2 class=" container fw-semibold MY-2">OUR PARTNERS</h2>
+    <div class="container my-3 mt-5">
+        <div class="heading my-3 text-center rounded-2 text-danger-emphasis ">
+            <h2 class=" container fw-semibold mt-2">OUR PARTNERS</h2>
         </div>
         <!-- Swiper -->
         <div class="swiper mySwiper">
