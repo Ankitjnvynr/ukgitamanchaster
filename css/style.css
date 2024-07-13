@@ -220,7 +220,7 @@
 /* CSS for the close button */
 .close-btn {
   position: absolute;
-  top: -20px;
+  top: 90px;
   right: 0px;
   background: transparent;
   border: none;
