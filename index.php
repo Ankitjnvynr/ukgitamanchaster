@@ -51,6 +51,9 @@
         max-width: 700px;
         font-size: 1rem;
     }
+    *{
+        font-family: 'Poppins', sans-serif !important;
+    }
     </style>
 </head>
 
@@ -226,6 +229,16 @@
             <a href='https://gieogita.org/'><button class="close-btn-below btn-bg" onclick="hidePopup()">Ok</button></a>
         </div>
     </div>
+
+
+
+
+    <div class="mt-3">
+    <?php include 'parts/_header.php' ?>
+    </div>
+
+
+
 
 
     <div class="heading my-3 text-center rounded-2 text-danger-emphasis ">

@@ -185,8 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to display the popup after 3 seconds
   function displayPopup() {
     setTimeout(function() {
-      document.getElementById('popupImage').style.display = 'block';
-      document.getElementsByClassName('backdrop')[0].style.display = 'block';
+      // document.getElementById('popupImage').style.display = 'block';
+      // document.getElementsByClassName('backdrop')[0].style.display = 'block';
       
     }, 1000); // 3000 milliseconds = 3 seconds
   }
