@@ -58,6 +58,7 @@
 </head>
 
 <body>
+<?php include 'parts/_header.php' ?>
     <!-- Popup Image -->
     <div class="backdrop"></div>
     <div id="popupImage" class="popup-image">
@@ -233,9 +234,9 @@
 
 
 
-    <div class="mt-3">
-    <?php include 'parts/_header.php' ?>
-    </div>
+    
+   
+
 
 
 
@@ -348,7 +349,7 @@
 
 
 
-    <div class="container-fluid bg-light py-4">
+    <div id="about" class="container-fluid bg-light py-4">
         <div style="text-align:justify" class="container clr1 text-justify text-justify">
             <h2 class="heading mb-2 mt-2 fw-semibold text-center">OVERVIEW</h2>
             GIEO GITA UK (Global Inspiration Enlightenment Organisation of the Bhagwad Gita) is an extension of the
@@ -471,10 +472,10 @@
         <div class="container  my-5">
             <h2 class="heading container text-center fw-semibold MY-2 ">CONNECT WITH SOCIAL MEDIA</h2>
             <div class="d-flex gap-5 align-items-center justify-content-center clr1">
-                <a target="_blank" href="https://www.facebook.com/GitaManishi"><i
-                        class="fa-brands fa-facebook clr1 btn fs-1"></i></a>
-                <a target="_blank" href="https://www.instagram.com/gieo_gita_uk/"><i
-                        class="fa-brands fa-instagram clr1 btn fs-1"></i></a>
+                <a target="_blank" href="https://www.facebook.com/GitaManishi"><img width="40px" src="https://img.icons8.com/?size=512&id=118497&format=png" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/gieo_gita_uk/">
+                    <img width="40px" src="https://image.similarpng.com/very-thumbnail/2021/01/Instagram-icon-illustration-on-transparent-background-PNG.png" alt="">
+                    </a>
             </div>
         </div>
     </div>
