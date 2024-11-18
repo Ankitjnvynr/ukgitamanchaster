@@ -33,32 +33,66 @@
         type="text/javascript"></script>
     <script src="js/script.js"></script>
 
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="style.css">
     <style>
-    .flex-item {
-        flex: 1 0 150px;
-    }
+        .flex-item {
+            flex: 1 0 150px;
+        }
 
-    .popdiv {
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 3rem;
-        padding: 3rem;
-        overflow-y: auto;
-        width: 95vw;
-        max-width: 700px;
-        font-size: 1rem;
-    }
-    *{
-        font-family: 'Poppins', sans-serif !important;
-    }
+        .popdiv {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 3rem;
+            padding: 3rem;
+            overflow-y: auto;
+            width: 95vw;
+            max-width: 700px;
+            font-size: 1rem;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+    <style>
+        #about {
+            background-image: url('imgs/gita-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            /* Parallax effect */
+            position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #about .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Adjust opacity */
+            z-index: 1;
+        }
+
+        #about .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-<?php include 'parts/_header.php' ?>
+    <?php include 'parts/_header.php' ?>
     <!-- Popup Image -->
     <div class="backdrop"></div>
     <div id="popupImage" class="popup-image">
@@ -234,13 +268,79 @@
 
 
 
-    
-   
 
 
 
 
 
+
+
+
+
+
+    <!-- overview------------- -->
+    <div id="about" class="container-fluid bg-light py-4" style="position: relative;">
+        <div class="background-overlay"></div>
+        <div style="text-align:justify" class="container clr1 text-justify text-justify content">
+            <h2 class="heading mb-2 mt-2 fw-semibold text-center">OVERVIEW</h2>
+            GIEO GITA UK (Global Inspiration Enlightenment Organisation of the Bhagwad Gita) is an extension of the
+            International GIEO GITA organization based in India. Its main objective is to unite likeminded individuals
+            worldwide
+            who believe in the universality of the Bhagwad Gita's teachings. By bringing together people from diverse
+            backgrounds, GIEO GITA UK aims to create an environment conducive to religious unity, universal brotherhood,
+            and
+            the
+            welfare of all. The organization seeks to promote understanding and appreciation of the Bhagwad Gita's
+            wisdom as a
+            means to foster harmony among different religious communities. Through various activities such as seminars,
+            workshops, and cultural events, GIEO GITA UK endeavors to spread the message of peace, compassion, and
+            spiritual
+            enlightenment embodied in the Bhagwad Gita. By emphasizing the common values shared by humanity, regardless
+            of
+            cultural or religious differences, GIEO GITA UK strives to build bridges of understanding and cooperation
+            among
+            people worldwide. Ultimately, the organization envisions a world where individuals can coexist peacefully,
+            embracing
+            diversity while working together for the betterment of society.
+        </div>
+    </div>
+
+    <div class="my-2">.</div>
+    <div class="container text-center mt-4">
+        <div class="row mb-3 heading text-danger-emphasis ">
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">SUBJECT</h2>
+                <div class="border border-3 p-3 bg-warning-subtle bg">Three-Day Multi-Faith Cultural Event – The
+                    Manchester Gita
+                    Festival - Promoting Peace, Love, and Harmony inspired by the teachings of the Bhagwad Gita.</div>
+
+            </div>
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">AIM</h2>
+                <div class="border border-3 p-3 bg-warning-subtle bg">Our aim is to create a platform that brings
+                    together
+                    diverse communities, fostering understanding and unity through the shared principles found in the
+                    Bhagwad
+                    Gita. This event will feature enlightening discussions, cultural performances, and interact.</div>
+
+            </div>
+            <div class="col-md">
+                <h2 class="heading mt-2 fw-semibold ">DESCRIPTION</h2>
+                <div class="border border-3 p-3 bg-warning-subtle bg">GIEO GITA UK (Global Inspiration Enlightenment
+                    Organisation of the Bhagwad Gita) is an extension of the International GIEO GITA organisation based
+                    in India.
+                    The main objective of this organisation is to bring together the likeminded people residing
+                    worldwide
+                    believing in the university of the Bhagwad Gita and to create an environment conducive to religious
+                    unity,
+                    universal brotherhood, and welfare of all.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- overview-------------end  -->
+
+    <!-- in association with start -->
 
     <div class="heading my-3 text-center rounded-2 text-danger-emphasis ">
         <h2 class="mt-2 container fw-semibold">IN ASSOCIATION WITH</h2>
@@ -261,6 +361,9 @@
 
         </div>
     </div>
+
+    <!-- in association with end -->
+
 
 
     <div class="container mb-4">
@@ -320,17 +423,17 @@
                     </div>
 
                     <script>
-                    function redirectTo1() {
-                        window.location.href = 'day1.php';
-                    }
+                        function redirectTo1() {
+                            window.location.href = 'day1.php';
+                        }
 
-                    function redirectTo2() {
-                        window.location.href = 'day2.php';
-                    }
+                        function redirectTo2() {
+                            window.location.href = 'day2.php';
+                        }
 
-                    function redirectTo3() {
-                        window.location.href = 'day3.php';
-                    }
+                        function redirectTo3() {
+                            window.location.href = 'day3.php';
+                        }
                     </script>
 
 
@@ -339,9 +442,9 @@
 
             </div>
 
-            <div class="col-md">
-                <div>
-                    <img style="width: 100%" src="banner.png" alt="" />
+            <div class="col-md ">
+                <div style="height: 100%;" class="d-flex flex-column justify-content-center align-items-center">
+                    <img style="width: 100%" src="imgs/banner.png" alt="" />
                 </div>
             </div>
         </div>
@@ -349,65 +452,78 @@
 
 
 
-    <div id="about" class="container-fluid bg-light py-4">
-        <div style="text-align:justify" class="container clr1 text-justify text-justify">
-            <h2 class="heading mb-2 mt-2 fw-semibold text-center">OVERVIEW</h2>
-            GIEO GITA UK (Global Inspiration Enlightenment Organisation of the Bhagwad Gita) is an extension of the
-            International GIEO GITA organization based in India. Its main objective is to unite likeminded individuals
-            worldwide
-            who believe in the universality of the Bhagwad Gita's teachings. By bringing together people from diverse
-            backgrounds, GIEO GITA UK aims to create an environment conducive to religious unity, universal brotherhood,
-            and
-            the
-            welfare of all. The organization seeks to promote understanding and appreciation of the Bhagwad Gita's
-            wisdom as a
-            means to foster harmony among different religious communities. Through various activities such as seminars,
-            workshops, and cultural events, GIEO GITA UK endeavors to spread the message of peace, compassion, and
-            spiritual
-            enlightenment embodied in the Bhagwad Gita. By emphasizing the common values shared by humanity, regardless
-            of
-            cultural or religious differences, GIEO GITA UK strives to build bridges of understanding and cooperation
-            among
-            people worldwide. Ultimately, the organization envisions a world where individuals can coexist peacefully,
-            embracing
-            diversity while working together for the betterment of society.
+
+
+    <style>
+        :root {
+            --darkbrown: '#3b0f13';
+        }
+
+        .spacer {
+            height: 50px !important;
+        }
+    </style>
+
+    <div class="spacer"></div>
+    <div class="container my-3">
+        <div class="heading my-3 text-center rounded-2 text-danger-emphasis ">
+            <h2 class=" container fw-semibold mt-2">GAU SEVA</h2>
         </div>
-    </div>
-
-
-    <div class="my-2">.</div>
-    <div class="container text-center mt-4">
-        <div class="row mb-3 heading text-danger-emphasis ">
-            <div class="col-md">
-                <h2 class="heading mt-2 fw-semibold ">SUBJECT</h2>
-                <div class="border border-3 p-3 bg-warning-subtle bg">Three-Day Multi-Faith Cultural Event – The
-                    Manchester Gita
-                    Festival - Promoting Peace, Love, and Harmony inspired by the teachings of the Bhagwad Gita.</div>
-
+        <div class="row">
+            <div class="col-md-4">
+                <img width="100%" src="gausala-2.jpg" alt="Gau Seva Image">
             </div>
-            <div class="col-md">
-                <h2 class="heading mt-2 fw-semibold ">AIM</h2>
-                <div class="border border-3 p-3 bg-warning-subtle bg">Our aim is to create a platform that brings
-                    together
-                    diverse communities, fostering understanding and unity through the shared principles found in the
-                    Bhagwad
-                    Gita. This event will feature enlightening discussions, cultural performances, and interact.</div>
-
-            </div>
-            <div class="col-md">
-                <h2 class="heading mt-2 fw-semibold ">DESCRIPTION</h2>
-                <div class="border border-3 p-3 bg-warning-subtle bg">GIEO GITA UK (Global Inspiration Enlightenment
-                    Organisation of the Bhagwad Gita) is an extension of the International GIEO GITA organisation based
-                    in India.
-                    The main objective of this organisation is to bring together the likeminded people residing
-                    worldwide
-                    believing in the university of the Bhagwad Gita and to create an environment conducive to religious
-                    unity,
-                    universal brotherhood, and welfare of all.</div>
+            <div style="color:#924500" class="col-md-8  ">
+                <h3 style=" font-weight:800" class="mt-3 heading">GIEO Gita Gaushala Seva in India: The Importance of Gau Seva and GIEO Gita's Mission</h3>
+                <p>
+                    Gau Seva, or service to cows, holds a special place in Indian culture, spirituality, and agricultural life.
+                    Revered as a sacred symbol of motherhood and nourishment, the cow is central to Hindu beliefs, representing purity, non-violence, and compassion.
+                </p>
+                <ul class="list-unstyled">
+                    <li><strong>Spiritual Significance:</strong> Serving cows (Gau Seva) is believed to purify one’s soul and remove obstacles in life.</li>
+                    <li><strong>Ecological Impact:</strong> Cows play a vital role in sustainable agriculture by promoting organic farming.</li>
+                    <li><strong>Economic and Agricultural Benefits:</strong> Cows provide sustenance and support rural livelihoods.</li>
+                    <li><strong>Health and Wellness:</strong> Products derived from cows promote good health through nutrients and Ayurveda.</li>
+                </ul>
             </div>
         </div>
     </div>
 
+    <div class="spacer"></div>
+
+
+    <!-- ---------education -------------------- -->
+
+    <div class="spacer"></div>
+    <div class="container my-3">
+        <!-- Bhagwad Gita Event Section -->
+        <div class="heading my-3 text-center rounded-2 text-danger-emphasis">
+            <h2 class="container fw-semibold mt-2">AN INTRODUCTION TO THE BHAGWAD GITA</h2>
+        </div>
+        <div class="row mb-4 d-flex justify-content-center align-items-center">
+            <div class="col-md-8" style="color:#924500">
+                <h3 style="font-weight:800" class="mt-3">Join us for a Unique Course on the Bhagwad Gita</h3>
+                <p>
+                    Led by Dr. Deepak Gupta and Dr. Anand Kulkarni under the guidance of Gita Manishi Swami Gyananandji Maharaj,
+                    this course brings the timeless wisdom of the Bhagwad Gita to modern life. Whether you're a beginner or
+                    looking to deepen your understanding, this course is for everyone.
+                </p>
+                <p><strong>📅 Date:</strong> 24th November 2024, 1pm - 5pm GMT</p>
+                <p><strong>📍 Venue:</strong> Indian Association Oldham</p>
+                <p><strong>💻 Available:</strong> In-person and online</p>
+                <p>Don’t miss this chance to connect with the Bhagwad Gita’s teachings.</p>
+                <p><a href="bhagwat-gita-course.php" target="_blank" class="btn btn-primary btn-bg">Know More...!</a></p>
+                <p><a href="https://forms.office.com/r/7zBZzmaxRL" target="_blank" class="btn btn-primary btn-bg">Register Today!</a></p>
+            </div>
+            <div class="col-md-4">
+                <img width="100%" src="imgs/gita course image.jpg" alt="Bhagwad Gita Course Image">
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+
+    <!-- ---------education --------------------end -->
 
 
 
@@ -475,7 +591,7 @@
                 <a target="_blank" href="https://www.facebook.com/GitaManishi"><img width="40px" src="https://img.icons8.com/?size=512&id=118497&format=png" alt=""></a>
                 <a target="_blank" href="https://www.instagram.com/gieo_gita_uk/">
                     <img width="40px" src="https://image.similarpng.com/very-thumbnail/2021/01/Instagram-icon-illustration-on-transparent-background-PNG.png" alt="">
-                    </a>
+                </a>
             </div>
         </div>
     </div>
