@@ -458,7 +458,9 @@
         :root {
             --darkbrown: '#3b0f13';
         }
-
+.themeclr{
+    color: #924500;
+}
         .spacer {
             height: 50px !important;
         }
@@ -524,6 +526,133 @@
 
 
     <!-- ---------education --------------------end -->
+
+
+
+
+
+
+
+
+
+<!-- ----------------------event section -------------------------- -->
+<div class="container my-5 py-4 event-section">
+    
+    <div class="heading text-center mb-4">
+        <h2 class="fw-semibold text-uppercase text-danger-emphasis">Events</h2>
+    </div>
+    <div class="spacer"></div>
+    <div class="row g-4 justify-content-center">
+        <!-- Event Card 1 -->
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card event-card h-100 shadow-lg border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4">
+                        <img src="imgs/festival2024.jpg" class="img-fluid rounded-start" alt="Manchaster Gita Festival">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 style="color:#924500" class="card-title text-dark fw-bold themeclr">Manchaster Gita Festival 2024</h5>
+                            <p class="card-text text-secondary themeclr">
+                                ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised Manchaster Gita Festival...
+                            </p>
+                            <a href="manchaster-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card event-card h-100 shadow-lg border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4">
+                        <img src="imgs/diwali cup.jpg" class="img-fluid rounded-start" alt="Diwali Cup">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark fw-bold themeclr">Manchaster Diwali Cup 2024</h5>
+                            <p class="card-text text-secondary themeclr">
+                                Greater Manchester Comes Together for Inaugural "Diwali Cup" Cricket Tournament...
+                            </p>
+                            <a href="diwali-cup" class="btn btn-danger btn-sm mt-2">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+</div>
+<!-- ----------------------event section --------------------------end -->
+
+<style>
+/* Custom Styles for Event Section */
+.event-section {
+    background-color: #faf2e4;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.event-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    max-width: 540px; /* Limit card width */
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.btn-danger {
+    background-color: #924500;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c72c3b;
+}
+
+
+
+.heading h2 {
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1.5px;
+}
+</style>
+
+
+
+
+
+
+
+
 
 
 
