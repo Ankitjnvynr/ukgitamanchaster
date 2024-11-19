@@ -56,12 +56,12 @@
                             </a>
                             <ul class="dropdown-menu menu-bar">
                                 <li><a class="dropdown-item" href="diwali-cup.php">Diwali Cup</a></li>
-                                <li><a class="dropdown-item" href="manchaster-gita-festival.php">Manchaster Gita Festival</a></li>
+                                <li><a class="dropdown-item" href="Manchester-gita-festival.php">Manchester Gita Festival</a></li>
                                 
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="gallary.php">Gallary</a>
+                            <a class="nav-link active" aria-current="page" href="Gallery.php">Gallery</a>
                         </li>
                     </ul>
                 </div>

@@ -117,6 +117,27 @@
         </div>
     </div>
 
+
+
+
+
+    <!-- Gallery Section -->
+    <div class="container my-5">
+        <h3 class="fw-semibold text-center">Event Gallery</h3>
+        <div id="gallery" class="row">
+            <!-- Images will be loaded here dynamically -->
+        </div>
+        <div class="text-center mt-4">
+            <button id="loadMore" class="btn btn-custom btn-lg">Show More</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <!-- Closing Section -->
     <div class="container my-5">
         <h3 class="fw-semibold text-center">A Look to the Future</h3>
@@ -127,6 +148,58 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+    <script>
+        let imageOffset = 0;
+        const galleryPath = 'imgs/diwali-gallery/';
+
+        // Function to load images
+        function loadImages() {
+            $.ajax({
+                url: 'parts/load_images.php',
+                method: 'GET',
+                data: {
+                    offset: imageOffset,
+                    path: galleryPath
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data); // For debugging
+                    const gallery = $('#gallery');
+
+                    // Check if data.images is an array and iterate if true
+                    if (Array.isArray(data.images)) {
+                        data.images.forEach(img => {
+                            const imgDiv = $('<div>').addClass('col-md-4 mb-4');
+                            imgDiv.html(`<img style="object-fit:cover; aspect-ratio:16/9;" src="imgs/diwali-gallery/${img}" class="img-fluid rounded" alt="Gallery Image">`);
+                            gallery.append(imgDiv);
+                        });
+                        imageOffset += 10; // Update offset for next batch
+                    } else {
+                        console.error("Error: data.images is not an array or is undefined", data.images);
+                    }
+
+                    // Check if more images are available
+                    if (!data.hasMore) {
+                        $('#loadMore').hide();
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error loading images:", error);
+                }
+            });
+        }
+
+        // Initial load
+        loadImages();
+
+        // Load more images on button click
+        $('#loadMore').on('click', loadImages);
+    </script>
 </body>
 
 </html>

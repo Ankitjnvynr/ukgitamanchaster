@@ -548,15 +548,15 @@
             <div class="card event-card h-100 shadow-lg border-0">
                 <div class="row g-0 align-items-center">
                     <div class="col-4">
-                        <img src="imgs/festival2024.jpg" class="img-fluid rounded-start" alt="Manchaster Gita Festival">
+                        <img src="imgs/festival2024.jpg" class="img-fluid rounded-start" alt="Manchester Gita Festival">
                     </div>
                     <div class="col-8">
                         <div class="card-body">
-                            <h5 style="color:#924500" class="card-title text-dark fw-bold themeclr">Manchaster Gita Festival 2024</h5>
+                            <h5 style="color:#924500" class="card-title text-dark fw-bold themeclr">Manchester Gita Festival 2024</h5>
                             <p class="card-text text-secondary themeclr">
-                                ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised Manchaster Gita Festival...
+                                ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised Manchester Gita Festival...
                             </p>
-                            <a href="manchaster-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
+                            <a href="Manchester-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -571,7 +571,7 @@
                     </div>
                     <div class="col-8">
                         <div class="card-body">
-                            <h5 class="card-title text-dark fw-bold themeclr">Manchaster Diwali Cup 2024</h5>
+                            <h5 class="card-title text-dark fw-bold themeclr">Manchester Diwali Cup 2024</h5>
                             <p class="card-text text-secondary themeclr">
                                 Greater Manchester Comes Together for Inaugural "Diwali Cup" Cricket Tournament...
                             </p>

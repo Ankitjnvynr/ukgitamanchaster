@@ -72,7 +72,7 @@
             <div class="col-12">
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
                     <?php
-                    $dir = "gallary/";  // Specify the directory containing images
+                    $dir = "Gallery/";  // Specify the directory containing images
                     $images = array_diff(scandir($dir), array('.', '..'));
 
                     foreach ($images as $index => $image) {
