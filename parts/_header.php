@@ -33,16 +33,16 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Seva
                             </a>
                             <ul class="dropdown-menu menu-bar">
-                                <li><a class="dropdown-item" href="gau-seva.php">Gau Seva</a></li>
+                                <li><a class="dropdown-item text-white" href="gau-seva.php">Gau Seva</a></li>
                                 
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Education
                             </a>
                             <ul class="dropdown-menu menu-bar">
@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Events
                             </a>
                             <ul class="dropdown-menu menu-bar">

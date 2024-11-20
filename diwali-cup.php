@@ -74,48 +74,34 @@
     <!-- Event Highlights Section -->
     <div class="container my-5">
         <div class="row">
-            <div class="col-md-8" style="color:#924500;">
+            <div class="col-md-8 d-flex flex-column justify-content-center  text-justify" style="color:#924500;">
                 <h3 class="fw-semibold">Event Highlights</h3>
                 <p>The tournament featured five hours of fast-paced cricket, with teams from all over Greater Manchester competing for the titles. The lively atmosphere was enriched by the sound of traditional Indian music, vibrant decorations, and the aroma of vegetarian food provided by Manchester’s ISKCON Temple.</p>
                 <p>One of the most memorable highlights occurred during the Diwali Cup final on Bhai Dooj, which celebrates the bond between siblings. On this day, siblings Lakhan Kapoor and Sanjivani found themselves as captains of opposing teams, exemplifying Diwali’s spirit and bringing an element of playful rivalry that thrilled the crowd.</p>
                 <p>The Indoor Centre’s entrance was beautifully transformed by dedicated volunteers into a vibrant "teleport capsule," featuring life-sized cut-outs of Lord Rama, Sita, and Lord Hanuman, symbolising their return to Ayodhya. Enhanced with colourful lights and devotional music, this immersive display invited attendees to light diyas as a gesture of prayer before the cricket festivities began.</p>
             </div>
             <div class="col-md-4">
-                <img src="imgs/diwali-cup-event.jpg" alt="Diwali Cup Event Image" class="img-fluid rounded mb-4">
+                <img src="imgs/diwali cup.jpg" alt="Diwali Cup Event Image" class="img-fluid rounded mb-4">
             </div>
         </div>
     </div>
 
     <!-- Winners Section -->
-    <div class="container my-5">
-        <h3 class="fw-semibold text-center">Tournament Winners</h3>
-        <p>After a day of spirited competition, <b>The Firecrackers</b> emerged as the Diwali Cup champions, while <b>HSS Sale</b> took home the Diwali Trophy. Spectators cheered on their favourite teams, and families engaged in Diwali crafts and rangoli art while enjoying cultural performances by Pyramid Yoga and Dance Academy and a traditional drum show by SKSST Bolton.</p>
-    </div>
-
-    <!-- Community Feedback Section -->
-    <div class="container my-5">
-        <h3 class="fw-semibold text-center">Community Feedback</h3>
-        <p class="text-center">Feedback from the community was overwhelmingly positive.</p>
+    <div class="container my-5 py-3">
         <div class="row">
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p class="mb-0">"Heartfelt thanks to GIEO Gita UK, the Lancashire Cricket Foundation, and the ECB Core Cities team for an incredible event. The entire family had a fantastic experience; it felt like we were back in India celebrating Diwali.”</p>
-                </blockquote>
+            <div class="col-md-6">
+                <img src="imgs/diwali-cup-winner.jpg" alt="Diwali Cup Event Image" class="img-fluid rounded mb-4">
             </div>
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p class="mb-0">"This landmark event brought together communities from all corners of India—North, South, East, and West—uniting Hindus, Sikhs, Jains, and Swaminarayan followers in a joyful celebration with the Lancashire Cricket Foundation. We’re incredibly grateful for their partnership."</p>
-                    <footer class="blockquote-footer">Aneet Kapoor, Trustee of GIEO GITA UK</footer>
-                </blockquote>
-            </div>
-            <div class="col-md-4">
-                <blockquote class="blockquote">
-                    <p class="mb-0">"It’s an honour to be part of the inaugural Diwali Cup. This event truly reflects our strong connection with the Hindu community in Greater Manchester. Diversity is our strength, and this tournament is a wonderful testament to that."</p>
-                    <footer class="blockquote-footer">Ammar Ashraf, Urban Cricket Manager</footer>
-                </blockquote>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-end text-justify" style="color:#924500;">
+                <h3 class="fw-semibold text-center">Tournament Winners</h3>
+                <p>After a day of spirited competition, <b>The Firecrackers</b> emerged as the Diwali Cup champions, while <b>HSS Sale</b> took home the Diwali Trophy. Spectators cheered on their favourite teams, and families engaged in Diwali crafts and rangoli art while enjoying cultural performances by Pyramid Yoga and Dance Academy and a traditional drum show by SKSST Bolton.</p>
+
             </div>
         </div>
     </div>
+
+
+
 
 
 
@@ -123,7 +109,7 @@
 
     <!-- Gallery Section -->
     <div class="container my-5">
-        <h3 class="fw-semibold text-center">Event Gallery</h3>
+        <h3 class="fw-semibold text-center" style="color:#924500;">Event Gallery</h3>
         <div id="gallery" class="row">
             <!-- Images will be loaded here dynamically -->
         </div>
@@ -136,10 +122,40 @@
 
 
 
+    
+   <!-- Community Feedback Section -->
+<div class="container my-5 py-5 rounded" style="color:#924500;">
+    <h3 class="fw-bold text-center mb-4" style="font-size: 1.8rem;">Community Feedback</h3>
+    <p class="text-center mb-5 text-muted" style="font-size: 1.1rem;">Feedback from the community was overwhelmingly positive.</p>
+    <div class="row text-center g-4" >
+        <div class="col-md-4 shadow-lg">
+            <blockquote class="blockquote text-muted">
+                <p class="mb-3" style="font-size: 1.1rem;">"Heartfelt thanks to GIEO Gita UK, the Lancashire Cricket Foundation, and the ECB Core Cities team for an incredible event. The entire family had a fantastic experience; it felt like we were back in India celebrating Diwali."</p>
+            </blockquote>
+        </div>
+        <div class="col-md-4 shadow-lg">
+            <blockquote class="blockquote text-muted">
+                <p class="mb-3" style="font-size: 1.1rem;">"This landmark event brought together communities from all corners of India—North, South, East, and West—uniting Hindus, Sikhs, Jains, and Swaminarayan followers in a joyful celebration with the Lancashire Cricket Foundation. We’re incredibly grateful for their partnership."</p>
+                <footer class="blockquote-footer" style="font-size: 0.9rem;">Aneet Kapoor, Trustee of GIEO GITA UK</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-4 shadow-lg">
+            <blockquote class="blockquote text-muted">
+                <p class="mb-3" style="font-size: 1.1rem;">"It’s an honour to be part of the inaugural Diwali Cup. This event truly reflects our strong connection with the Hindu community in Greater Manchester. Diversity is our strength, and this tournament is a wonderful testament to that."</p>
+                <footer class="blockquote-footer" style="font-size: 0.9rem;">Ammar Ashraf, Urban Cricket Manager</footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 
     <!-- Closing Section -->
-    <div class="container my-5">
+    <div class="container my-5" style="color:#924500;">
         <h3 class="fw-semibold text-center">A Look to the Future</h3>
         <p>With the Diwali Cup’s resounding success, organisers are already looking ahead to expanding next year’s event, making it a cherished annual celebration of cricket, culture, and community in Greater Manchester.</p>
         <div class="text-center">
