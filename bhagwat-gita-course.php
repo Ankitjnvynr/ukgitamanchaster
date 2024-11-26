@@ -111,12 +111,10 @@
     <div class="spacer"></div>
 
     
-    <div class="container my-5">
-        <p>
-            For more information, visit the official GIEO Gita website: 
-            <a href="https://www.gieogita.org" target="_blank">www.gieogita.org</a>.
-        </p>
-    </div>
+    <?php
+    include 'parts/_footer.php';
+    ?>
+
 
 
 

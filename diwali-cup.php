@@ -158,10 +158,16 @@
     <div class="container my-5" style="color:#924500;">
         <h3 class="fw-semibold text-center">A Look to the Future</h3>
         <p>With the Diwali Cup’s resounding success, organisers are already looking ahead to expanding next year’s event, making it a cherished annual celebration of cricket, culture, and community in Greater Manchester.</p>
-        <div class="text-center">
-            <a href="https://www.gieogita.org" target="_blank" class="btn btn-custom btn-lg">Visit GIEO Gita UK</a>
-        </div>
+
     </div>
+
+
+
+
+    <?php
+    include 'parts/_footer.php';
+    ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

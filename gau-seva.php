@@ -49,20 +49,7 @@
             transform: scale(1.02);
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #58151c;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: #f7e092;
-            font-weight: bold;
-        }
+        
     </style>
 </head>
 
@@ -122,12 +109,10 @@
         </div>
     </div>
 
-    <div class="container my-5">
-        <p>
-            For more information, visit the official GIEO Gita website: 
-            <a href="https://www.gieogita.org" target="_blank">www.gieogita.org</a>.
-        </p>
-    </div>
+    <?php
+    include 'parts/_footer.php';
+    ?>
+
 
     <!-- <footer>
         <p>© 2024 GIEO Gita. All rights reserved. <a href="https://www.gieogita.org" target="_blank">Learn More</a></p>

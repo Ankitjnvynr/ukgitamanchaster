@@ -72,27 +72,38 @@
             <div class="col-12">
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
                     <?php
-                    $dir = "Gallery/";  // Specify the directory containing images
+                    $dir = "imgs/gallery/";  // Specify the directory containing images
                     $images = array_diff(scandir($dir), array('.', '..'));
 
-                    foreach ($images as $index => $image) {
-                        $imagePath = $dir . $image;
-                        echo '
-                        <div class="col">
-                            <a href="#lightbox-' . $index . '">
-                                <img class="card-img" src="' . $imagePath . '" alt="Card image">
-                            </a>
-                            <div id="lightbox-' . $index . '" class="lightbox">
-                                <a href="#" class="close">&times;</a>
-                                <img src="' . $imagePath . '" alt="Lightbox image">
-                            </div>
-                        </div>';
+                    if(!$images){
+                        echo "No images found.";
+                    }else{
+                        foreach ($images as $index => $image) {
+                            $imagePath = $dir . $image;
+                            echo '
+                            <div class="col">
+                                <a href="#lightbox-' . $index . '">
+                                    <img class="card-img" src="' . $imagePath . '" alt="Card image">
+                                </a>
+                                <div id="lightbox-' . $index . '" class="lightbox">
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="' . $imagePath . '" alt="Lightbox image">
+                                </div>
+                            </div>';
+                        }
                     }
                     ?>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <?php
+    include 'parts/_footer.php';
+    ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

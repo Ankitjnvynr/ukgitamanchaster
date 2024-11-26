@@ -725,6 +725,9 @@
         </div>
     </div>
 
+    <?php
+    include 'parts/_footer.php';
+    ?>
 
 
 </body>
