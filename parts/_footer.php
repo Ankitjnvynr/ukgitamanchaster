@@ -24,12 +24,11 @@
             <div class="col-md-3 mb-3">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li>Home</li>
-                    <li>Events</li>
-                    <li>Gallery</li>
-                    <li>Contact</li>
-                    
-                    <li>About Us</li>
+                    <li><a href="#" class="quick-link">Home</a></li>
+                    <li><a href="#" class="quick-link">Events</a></li>
+                    <li><a href="#" class="quick-link">Gallery</a></li>
+                    <li><a href="#" class="quick-link">Contact</a></li>
+                    <li><a href="#" class="quick-link">About Us</a></li>
                 </ul>
             </div>
 
@@ -48,4 +47,35 @@
             </div>
         </div>
     </div>
+
+    <style>
+        /* Quick Links Hover Effect */
+        .quick-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+           
+            color: #ffcc00; /* Change text color */
+        }
+
+        .quick-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #ffcc00;
+            transition: width 0.3s ease;
+        }
+
+        .quick-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </footer>

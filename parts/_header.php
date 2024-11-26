@@ -5,12 +5,14 @@
         font-size: medium;
     }
 
-    .menu-bar a:hover {
+    .menu-bar a:hover , .nav-item a:hover {
         background: #3b0f13;
+        color: #ffcc00 !important;
     }
     a{
         cursor: pointer;
     }
+    
 </style>
 
 <div class="container-fluid menu-bar">
