@@ -24,11 +24,11 @@
             <div class="col-md-3 mb-3">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="quick-link">Home</a></li>
-                    <li><a href="#" class="quick-link">Events</a></li>
-                    <li><a href="#" class="quick-link">Gallery</a></li>
-                    <li><a href="#" class="quick-link">Contact</a></li>
-                    <li><a href="#" class="quick-link">About Us</a></li>
+                    <li><a href="./" class="quick-link">Home</a></li>
+                    <li><a href="./#events" class="quick-link">Events</a></li>
+                    <li><a href="./gallery" class="quick-link">Gallery</a></li>
+                    <!-- <li><a href="#" class="quick-link">Contact</a></li> -->
+                    <li><a href="./#about" class="quick-link">About Us</a></li>
                 </ul>
             </div>
 
