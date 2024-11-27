@@ -56,10 +56,61 @@
             background-color: #b35000;
         }
     </style>
+        <style>
+        #gallery {
+            columns: 5;
+        }
+
+        /* Desktop: 4 columns */
+        @media (max-width: 1200px) {
+            #gallery {
+                columns: 4;
+            }
+        }
+
+        /* Tablet: 3 columns */
+        @media (max-width: 768px) {
+            #gallery {
+                columns: 3;
+            }
+        }
+
+        /* Mobile: 1 column */
+        @media (max-width: 480px) {
+            #gallery {
+                columns: 1;
+            }
+        }
+
+        .gallery-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        
+    </style>
 </head>
 
 <body>
     <?php include 'parts/_header.php'; ?>
+
+
+
+    
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="lightboxImage" src="" alt="Lightbox" class="img-fluid w-100">
+                </div>
+                <button type="button" class="btn-close position-absolute top-0 end-0 p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- Content Section -->
     <section class="content-section">
@@ -151,7 +202,7 @@
      <!-- Gallery Section -->
      <div class="container my-5">
         <h3 class="fw-semibold text-center" style="color:#924500;">Event Gallery</h3>
-        <div id="gallery" class="row">
+        <div id="gallery" >
             <!-- Images will be loaded here dynamically -->
         </div>
         <div class="text-center mt-4">
@@ -161,6 +212,30 @@
 
   
 </div>
+
+
+
+<div class="container my-5">
+<h3 class="fw-semibold text-center" style="color:#924500;">Event Video Gallery</h3>
+        <div class="row g-4 items-center">
+            <?php
+            // Array of YouTube video links
+            $videoLinks = [
+                "https://www.youtube.com/embed/2QyYFXYHZkc?si=aUWk7HGtBtfGyLwQ",
+                
+            ];
+
+            // Loop through the video links and generate iframes
+            foreach ($videoLinks as $link) {
+                echo '<div class="col-md-6 col-lg-4">';
+                echo '<div class="ratio ratio-16x9">';
+                echo '<iframe src="' . htmlspecialchars($link) . '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
+        </div>
+    </div>
 
 
 
@@ -199,24 +274,35 @@
                 },
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data); // For debugging
+                    console.log(data); // For debugging purposes
                     const gallery = $('#gallery');
 
                     // Check if data.images is an array and iterate if true
                     if (Array.isArray(data.images)) {
                         data.images.forEach(img => {
-                            const imgDiv = $('<div>').addClass('col-md-4 mb-4');
-                            imgDiv.html(`<img style="object-fit:cover; aspect-ratio:16/9;" src="imgs/gita-festival/${img}" class="img-fluid rounded" alt="Gallery Image">`);
-                            gallery.append(imgDiv);
+                            // Create an img element inside a wrapper for the lightbox
+                            const imgWrapper = $(`
+                               
+                                    <img src="${galleryPath}${img}" alt="${img}" 
+                                    class="gallery-image mb-3 rounded" style="width:100%;" 
+                                    data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+                                    data-bs-image="${galleryPath}${img}">
+                                
+                            `);
+
+                            // Append the wrapper to the gallery
+                            gallery.append(imgWrapper);
                         });
-                        imageOffset += 10; // Update offset for next batch
+
+                        // Update offset for the next batch of images
+                        imageOffset += data.images.length;
                     } else {
                         console.error("Error: data.images is not an array or is undefined", data.images);
                     }
 
                     // Check if more images are available
                     if (!data.hasMore) {
-                        $('#loadMore').hide();
+                        $('#loadMore').hide(); // Hide the Load More button if no more images
                     }
                 },
                 error: function(xhr, status, error) {
@@ -225,11 +311,19 @@
             });
         }
 
-        // Initial load
-        loadImages();
+        // Event listener for opening the lightbox
+        $(document).on('click', '.gallery-image', function() {
+            const imageSrc = $(this).data('bs-image'); // Get the image URL
+            $('#lightboxImage').attr('src', imageSrc); // Set the modal image source
+        });
 
-        // Load more images on button click
-        $('#loadMore').on('click', loadImages);
+        // Initial load
+        $(document).ready(function() {
+            loadImages();
+
+            // Load more images on button click
+            $('#loadMore').on('click', loadImages);
+        });
     </script>
 </body>
 

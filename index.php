@@ -536,7 +536,7 @@
 
 
 <!-- ----------------------event section -------------------------- -->
-<div class="container my-5 py-4 event-section">
+<div id="events" class="container my-5 py-4 event-section">
     
     <div class="heading text-center mb-4">
         <h2 class="fw-semibold text-uppercase text-danger-emphasis">Events</h2>
@@ -556,7 +556,7 @@
                             <p class="card-text text-secondary themeclr">
                                 ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised Manchester Gita Festival...
                             </p>
-                            <a href="Manchester-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
+                            <a href="manchester-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
                         </div>
                     </div>
                 </div>

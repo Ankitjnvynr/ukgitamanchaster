@@ -18,13 +18,15 @@
             min-height: 100vh;
         }
 
-        .card-img {
+        .card-img,
+        .video-thumb {
             width: 100%;
             cursor: pointer;
             transition: transform 0.2s;
         }
 
-        .card-img:hover {
+        .card-img:hover,
+        .video-thumb:hover {
             transform: scale(1.05);
         }
 
@@ -63,49 +65,133 @@
 
 <body>
 
-   
-        <?php include 'parts/_header.php' ?>
-   
+    <?php include 'parts/_header.php'; ?>
 
     <div class="container my-5">
+        <!-- Row for Cards -->
         <div class="row">
-            <div class="col-12">
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
-                    <?php
-                    $dir = "imgs/gallery/";  // Specify the directory containing images
-                    $images = array_diff(scandir($dir), array('.', '..'));
+            <!-- Image Gallery Card -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Event Images</h3>
+                        <div id="gallery-container" class="row row-cols-2 g-3">
+                            <!-- Images will be loaded here dynamically -->
+                        </div>
+                        <div class="text-center mt-4">
+                            <button id="loadMoreImages" class="btn btn-primary">Load More Images</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    if(!$images){
-                        echo "No images found.";
-                    }else{
-                        foreach ($images as $index => $image) {
-                            $imagePath = $dir . $image;
-                            echo '
-                            <div class="col">
-                                <a href="#lightbox-' . $index . '">
-                                    <img class="card-img" src="' . $imagePath . '" alt="Card image">
-                                </a>
-                                <div id="lightbox-' . $index . '" class="lightbox">
-                                    <a href="#" class="close">&times;</a>
-                                    <img src="' . $imagePath . '" alt="Lightbox image">
-                                </div>
-                            </div>';
-                        }
-                    }
-                    ?>
+            <!-- Video Gallery Card -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Event Videos</h3>
+                        <div id="video-container" class="row row-cols-1 g-3">
+                            <!-- Videos will be loaded here dynamically -->
+                        </div>
+                        <div class="text-center mt-4">
+                            <button id="loadMoreVideos" class="btn btn-secondary">Load More Videos</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <?php
-    include 'parts/_footer.php';
-    ?>
-
+    <?php include 'parts/_footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Image Variables
+        let imageOffset = 0;
+        const imagesPerLoad = 10;
+        const galleryDir = "imgs/gallery/";
+        const images = <?php echo json_encode(array_diff(scandir($dir), array('.', '..'))); ?>;
+
+        // Video Variables
+        let videoOffset = 0;
+        const videosPerLoad = 6;
+        const videoDir = "videos/gallery/";
+        const videos = <?php echo json_encode(array_diff(scandir('videos/gallery/'), array('.', '..'))); ?>;
+
+        const galleryContainer = document.getElementById('gallery-container');
+        const videoContainer = document.getElementById('video-container');
+        const loadMoreImagesButton = document.getElementById('loadMoreImages');
+        const loadMoreVideosButton = document.getElementById('loadMoreVideos');
+
+        // Function to load images
+        function loadImages() {
+            const maxImages = images.length;
+            const end = Math.min(imageOffset + imagesPerLoad, maxImages);
+
+            for (let i = imageOffset; i < end; i++) {
+                const image = images[i];
+                const imagePath = galleryDir + image;
+
+                const imageHTML = `
+                    <div class="col">
+                        <a href="#lightbox-${i}">
+                            <img class="card-img" src="${imagePath}" alt="Card image">
+                        </a>
+                        <div id="lightbox-${i}" class="lightbox">
+                            <a href="#" class="close">&times;</a>
+                            <img src="${imagePath}" alt="Lightbox image">
+                        </div>
+                    </div>
+                `;
+
+                galleryContainer.innerHTML += imageHTML;
+            }
+
+            imageOffset += imagesPerLoad;
+
+            if (imageOffset >= maxImages) {
+                loadMoreImagesButton.style.display = 'none';
+            }
+        }
+
+        // Function to load videos
+        function loadVideos() {
+            const maxVideos = videos.length;
+            const end = Math.min(videoOffset + videosPerLoad, maxVideos);
+
+            for (let i = videoOffset; i < end; i++) {
+                const video = videos[i];
+                const videoPath = videoDir + video;
+
+                const videoHTML = `
+                    <div class="col">
+                        <div class="card">
+                            <video class="video-thumb" controls>
+                                <source src="${videoPath}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                `;
+
+                videoContainer.innerHTML += videoHTML;
+            }
+
+            videoOffset += videosPerLoad;
+
+            if (videoOffset >= maxVideos) {
+                loadMoreVideosButton.style.display = 'none';
+            }
+        }
+
+        // Initial Load
+        loadImages();
+        loadVideos();
+
+        // Event Listeners for Load More buttons
+        loadMoreImagesButton.addEventListener('click', loadImages);
+        loadMoreVideosButton.addEventListener('click', loadVideos);
+    </script>
 </body>
 
 </html>
