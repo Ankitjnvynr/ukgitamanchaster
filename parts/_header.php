@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://parivaar.gieogita.org/">Join GIEO Gita</a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,9 +59,10 @@
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Events
                             </a>
-                            <ul class="dropdown-menu menu-bar">
+                           <ul class="dropdown-menu menu-bar">
                                 <li><a class="dropdown-item" href="diwali-cup.php">Diwali Cup</a></li>
-                                <li><a class="dropdown-item" href="manchester-gita-festival.php">Manchester Gita Festival</a></li>
+                                <li><a class="dropdown-item" href="manchester-gita-festival-2024">Manchester Gita Festival-2024</a></li>
+                                <li><a class="dropdown-item" href="manchester-gita-festival-2025">Manchester Gita Festival-2025</a></li>
                                 
                             </ul>
                         </li>
