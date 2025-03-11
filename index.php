@@ -23,7 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -87,9 +87,6 @@
             position: relative;
             z-index: 2;
             color: white;
-        }
-        .text-justify{
-            text-align: justify;
         }
     </style>
 </head>
@@ -366,9 +363,10 @@
     </div>
 
     <!-- in association with end -->
-
-
-
+    
+    
+    
+    
     <!-- ---------------------- upcomming event section -------------------------- -->
     <div id="events" class="container my-5 py-4 event-section">
 
@@ -384,11 +382,9 @@
                 <h4 style="color:#924500" class="card- text-dark fw-bold themeclr">Manchester Gita Festival 2025</h4>
                 <p class="themeclr text-justify" >The Manchester Gita Festival 2025, taking place from 20th to 22nd June 2025, will be a three-day celebration of Yoga in its true essence, exploring its diverse forms and deeper philosophical significance. Rooted in the teachings of the Bhagwad Gita, the festival will highlight Yoga as a profound path to self-realisation, inner transformation, and unity.</p>
                 <p class="themeclr text-justify">
-                At its core, Yoga is not merely physical exercise but a way of life, originating from the ancient wisdom of India. The true form of Yoga, as outlined in the Bhagwad Gita, encompasses discipline of the body, mind, and soul, guiding individuals towards inner peace, self-awareness, and ultimate liberation (moksha). It is a practice of union—with oneself, with others, and with the divine.
+                At its core, Yoga is not merely physical exercise but a way of life, originating from the ancient wisdom of India. The true form of Yoga, as outlined in the Bhagwad Gita, encompasses discipline of the body, mind, and soul, guiding individuals towards inner peace, self-awareness, and ultimate liberation (moksha)......
                 </p>
-                <p class="themeclr text-justify">
-                A key focus of the festival is International Yoga Day on 21st June, a globally recognised occasion that signifies Yoga’s universal relevance and timeless wisdom. This day, established by the United Nations in 2014  ........
-            </p>
+                
             <a href="manchester-gita-festival-2025" class="btn btn-danger btn-sm mt-2">Read more</a>
             </div>
         </div>
@@ -396,7 +392,6 @@
 
     </div>
     <!-- ---------------------- upcomming event section --------------------------end -->
-
 
 
 
@@ -492,11 +487,9 @@
         :root {
             --darkbrown: '#3b0f13';
         }
-
-        .themeclr {
-            color: #924500;
-        }
-
+.themeclr{
+    color: #924500;
+}
         .spacer {
             height: 50px !important;
         }
@@ -512,23 +505,16 @@
                 <img width="100%" src="gausala-2.jpg" alt="Gau Seva Image">
             </div>
             <div style="color:#924500" class="col-md-8  ">
-                <h3 style=" font-weight:800" class="mt-3 heading">GIEO Gita Gaushala Seva in India: The Importance of
-                    Gau Seva and GIEO Gita's Mission</h3>
+                <h3 style=" font-weight:800" class="mt-3 heading">GIEO Gita Gaushala Seva in India: The Importance of Gau Seva and GIEO Gita's Mission</h3>
                 <p>
-                    Gau Seva, or service to cows, holds a special place in Indian culture, spirituality, and
-                    agricultural life.
-                    Revered as a sacred symbol of motherhood and nourishment, the cow is central to Hindu beliefs,
-                    representing purity, non-violence, and compassion.
+                    Gau Seva, or service to cows, holds a special place in Indian culture, spirituality, and agricultural life.
+                    Revered as a sacred symbol of motherhood and nourishment, the cow is central to Hindu beliefs, representing purity, non-violence, and compassion.
                 </p>
                 <ul class="list-unstyled">
-                    <li><strong>Spiritual Significance:</strong> Serving cows (Gau Seva) is believed to purify one’s
-                        soul and remove obstacles in life.</li>
-                    <li><strong>Ecological Impact:</strong> Cows play a vital role in sustainable agriculture by
-                        promoting organic farming.</li>
-                    <li><strong>Economic and Agricultural Benefits:</strong> Cows provide sustenance and support rural
-                        livelihoods.</li>
-                    <li><strong>Health and Wellness:</strong> Products derived from cows promote good health through
-                        nutrients and Ayurveda.</li>
+                    <li><strong>Spiritual Significance:</strong> Serving cows (Gau Seva) is believed to purify one’s soul and remove obstacles in life.</li>
+                    <li><strong>Ecological Impact:</strong> Cows play a vital role in sustainable agriculture by promoting organic farming.</li>
+                    <li><strong>Economic and Agricultural Benefits:</strong> Cows provide sustenance and support rural livelihoods.</li>
+                    <li><strong>Health and Wellness:</strong> Products derived from cows promote good health through nutrients and Ayurveda.</li>
                 </ul>
             </div>
         </div>
@@ -549,20 +535,16 @@
             <div class="col-md-8" style="color:#924500">
                 <h3 style="font-weight:800" class="mt-3">Join us for a Unique Course on the Bhagwad Gita</h3>
                 <p>
-                    Led by Dr. Deepak Gupta and Dr. Anand Kulkarni under the guidance of Gita Manishi Swami Gyananandji
-                    Maharaj,
-                    this course brings the timeless wisdom of the Bhagwad Gita to modern life. Whether you're a beginner
-                    or
+                    Led by Dr. Deepak Gupta and Dr. Anand Kulkarni under the guidance of Gita Manishi Swami Gyananandji Maharaj,
+                    this course brings the timeless wisdom of the Bhagwad Gita to modern life. Whether you're a beginner or
                     looking to deepen your understanding, this course is for everyone.
                 </p>
                 <p><strong>📅 Date:</strong> 24th November 2024, 1pm - 5pm GMT</p>
                 <p><strong>📍 Venue:</strong> Indian Association Oldham</p>
                 <p><strong>💻 Available:</strong> In-person and online</p>
                 <p>Don’t miss this chance to connect with the Bhagwad Gita’s teachings.</p>
-                <p><a href="bhagwat-gita-course.php" target="_blank" class="btn btn-primary btn-bg">Know More...!</a>
-                </p>
-                <p><a href="https://forms.office.com/r/7zBZzmaxRL" target="_blank"
-                        class="btn btn-primary btn-bg">Register Today!</a></p>
+                <p><a href="bhagwat-gita-course.php" target="_blank" class="btn btn-primary btn-bg">Know More...!</a></p>
+                <p><a href="https://forms.office.com/r/7zBZzmaxRL" target="_blank" class="btn btn-primary btn-bg">Register Today!</a></p>
             </div>
             <div class="col-md-4">
                 <img width="100%" src="imgs/gita course image.jpg" alt="Bhagwad Gita Course Image">
@@ -582,120 +564,116 @@
 
 
 
-    <!-- ----------------------event section -------------------------- -->
-    <div id="events" class="container my-5 py-4 event-section">
-
-        <div class="heading text-center mb-4">
-            <h2 class="fw-semibold text-uppercase text-danger-emphasis">Events</h2>
-        </div>
-        <div class="spacer"></div>
-        <div class="row g-4 justify-content-center">
-            <!-- Event Card 1 -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="card event-card h-100 shadow-lg border-0">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-4">
-                            <img src="imgs/festival2024.jpg" class="img-fluid rounded-start"
-                                alt="Manchester Gita Festival">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h5 style="color:#924500" class="card-title text-dark fw-bold themeclr">Manchester Gita
-                                    Festival 2024</h5>
-                                <p class="card-text text-secondary themeclr">
-                                    ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised
-                                    Manchester Gita Festival...
-                                </p>
-                                <a href="manchester-gita-festival" class="btn btn-danger btn-sm mt-2">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Event Card 2 -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="card event-card h-100 shadow-lg border-0">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-4">
-                            <img src="imgs/diwali cup.jpg" class="img-fluid rounded-start" alt="Diwali Cup">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark fw-bold themeclr">Manchester Diwali Cup 2024</h5>
-                                <p class="card-text text-secondary themeclr">
-                                    Greater Manchester Comes Together for Inaugural "Diwali Cup" Cricket Tournament...
-                                </p>
-                                <a href="diwali-cup" class="btn btn-danger btn-sm mt-2">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="spacer"></div>
-
+<!-- ----------------------event section -------------------------- -->
+<div id="events" class="container my-5 py-4 event-section">
+    
+    <div class="heading text-center mb-4">
+        <h2 class="fw-semibold text-uppercase text-danger-emphasis">Events</h2>
     </div>
-    <!-- ----------------------event section --------------------------end -->
+    <div class="spacer"></div>
+    <div class="row g-4 justify-content-center">
+        <!-- Event Card 1 -->
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card event-card h-100 shadow-lg border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4">
+                        <img src="imgs/festival2024.jpg" class="img-fluid rounded-start" alt="Manchester Gita Festival">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 style="color:#924500" class="card-title text-dark fw-bold themeclr">Manchester Gita Festival 2024</h5>
+                            <p class="card-text text-secondary themeclr">
+                                ‘GIEO Gita UK’ under guidance of H H Shri Swami Gyananandji Maharaj organised Manchester Gita Festival...
+                            </p>
+                            <a href="manchester-gita-festival-2024" class="btn btn-danger btn-sm mt-2">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div class="col-12 col-md-6 col-lg-5">
+            <div class="card event-card h-100 shadow-lg border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4">
+                        <img src="imgs/diwali cup.jpg" class="img-fluid rounded-start" alt="Diwali Cup">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark fw-bold themeclr">Manchester Diwali Cup 2024</h5>
+                            <p class="card-text text-secondary themeclr">
+                                Greater Manchester Comes Together for Inaugural "Diwali Cup" Cricket Tournament...
+                            </p>
+                            <a href="diwali-cup" class="btn btn-danger btn-sm mt-2">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
 
-    <style>
-        /* Custom Styles for Event Section */
-        .event-section {
-            background-color: #faf2e4;
-            border-radius: 15px;
-            padding: 20px;
-        }
+</div>
+<!-- ----------------------event section --------------------------end -->
 
-        .event-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-radius: 12px;
-            max-width: 540px;
-            /* Limit card width */
-        }
+<style>
+/* Custom Styles for Event Section */
+.event-section {
+    background-color: #faf2e4;
+    border-radius: 15px;
+    padding: 20px;
+}
 
-        .event-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+.event-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    max-width: 540px; /* Limit card width */
+}
 
-        .img-fluid {
-            height: 100%;
-            object-fit: cover;
-        }
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-        .card-body {
-            padding: 1rem;
-        }
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+}
 
-        .card-title {
-            font-size: 1.2rem;
-            color: #343a40;
-            margin-bottom: 0.5rem;
-        }
+.card-body {
+    padding: 1rem;
+}
 
-        .card-text {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
+.card-title {
+    font-size: 1.2rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
 
-        .btn-danger {
-            background-color: #924500;
-            color: #fff;
-            border-radius: 20px;
-            padding: 0.3rem 1rem;
-            transition: background-color 0.3s;
-        }
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
 
-        .btn-danger:hover {
-            background-color: #c72c3b;
-        }
+.btn-danger {
+    background-color: #924500;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c72c3b;
+}
 
 
 
-        .heading h2 {
-            font-family: 'Arial', sans-serif;
-            letter-spacing: 1.5px;
-        }
-    </style>
+.heading h2 {
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1.5px;
+}
+</style>
 
 
 
@@ -768,12 +746,9 @@
         <div class="container  my-5">
             <h2 class="heading container text-center fw-semibold MY-2 ">CONNECT WITH SOCIAL MEDIA</h2>
             <div class="d-flex gap-5 align-items-center justify-content-center clr1">
-                <a target="_blank" href="https://www.facebook.com/GitaManishi"><img width="40px"
-                        src="https://img.icons8.com/?size=512&id=118497&format=png" alt=""></a>
+                <a target="_blank" href="https://www.facebook.com/GitaManishi"><img width="40px" src="https://img.icons8.com/?size=512&id=118497&format=png" alt=""></a>
                 <a target="_blank" href="https://www.instagram.com/gieo_gita_uk/">
-                    <img width="40px"
-                        src="https://image.similarpng.com/very-thumbnail/2021/01/Instagram-icon-illustration-on-transparent-background-PNG.png"
-                        alt="">
+                    <img width="40px" src="https://image.similarpng.com/very-thumbnail/2021/01/Instagram-icon-illustration-on-transparent-background-PNG.png" alt="">
                 </a>
             </div>
         </div>

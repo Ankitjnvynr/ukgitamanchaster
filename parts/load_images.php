@@ -1,5 +1,5 @@
 <?php
-$imagesPerPage = 9;
+$imagesPerPage = 15;
 $offset = isset($_GET['offset']) ? (int)$_GET['offset'] : 0;
 $path = isset($_GET['path']) ? $_GET['path'] : 'imgs/diwali-gallery';
 

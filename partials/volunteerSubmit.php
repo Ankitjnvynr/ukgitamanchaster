@@ -27,22 +27,24 @@ try {
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escape user inputs for security
-    $aider = $conn->real_escape_string($_POST['v-aider']);
     $name = $conn->real_escape_string($_POST['v-name']);
+    $aider = $conn->real_escape_string($_POST['v-aider']);
+    $aiderday = $conn->real_escape_string($_POST['aider-day']);
+    $aidertype = $conn->real_escape_string($_POST['aider-type']);
     $age = $conn->real_escape_string($_POST['v-age']);
     $city = $conn->real_escape_string($_POST['v-city']);
     $organisation = $conn->real_escape_string($_POST['organisation']);
     $organisation_name = $conn->real_escape_string($_POST['v-organisation-name']);
     $telephone = $conn->real_escape_string($_POST['v-Telephone']);
     $email = $conn->real_escape_string($_POST['v-email']);
-    $sewa1 = $conn->real_escape_string($_POST['v-sewa1']);
-    $sewa2 = $conn->real_escape_string($_POST['v-sewa2']);
+    // $sewa1 = $conn->real_escape_string($_POST['v-sewa1']);
+    // $sewa2 = $conn->real_escape_string($_POST['v-sewa2']);
 
     // Attempt insert query execution
-    $sql = "INSERT INTO volunteer_data (name, age,aider, city, organisation, organisation_name, telephone, email, sewa1, sewa2) 
-            VALUES ('$name', '$age','$aider', '$city', '$organisation', '$organisation_name', '$telephone', '$email', '$sewa1', '$sewa2')";
+    $sql = "INSERT INTO volunteer_data (name, aider, aiderday, aidertype, age, city, organisation, organisation_name, telephone, email) 
+            VALUES ('$name','$aider', '$aiderday','$aidertype', '$age', '$city', '$organisation', '$organisation_name', '$telephone', '$email')";
     if ($conn->query($sql) === true) {
-        echo 'done';
+        echo 1;
     } else {
         echo "ERROR: Could not able to execute $sql. " . $conn->error;
     }
@@ -50,3 +52,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+

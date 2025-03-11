@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         // Form data inserted successfully
-        echo 'done';
+        echo 1;
     } else {
         // Error occurred during insertion
         echo 'Error: ' . $stmt->error;

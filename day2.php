@@ -11,7 +11,6 @@
             margin: 0 auto;
             padding: 20px;
             background: #f7e092;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
         }
         .image-container {
@@ -79,7 +78,7 @@
             <h2>Venue Details:</h2>
             <div class="content-container">
                 <div class="image-container">
-                    <img src="guruji.jpg" alt="Guruji">
+                    <img src="gita.jpeg" alt="Guruji">
                 </div>
                 <div class="text-container textbold">
                     <div>Location: Manchester</div>
@@ -89,8 +88,8 @@
                     <div>Expected Attendees: 1200</div>
                     <div>
                         <p >
-                        <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302418', '_blank')">Book your tickets here</button>
-                        <button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/', '_self')">Back to homepage</button>
+                        <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302418', '_blank')">Book your free tickets</button>
+                        <!--<button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/', '_self')">Back to homepage</button>-->
                     </p></div>
                 </div>
                 </div>
@@ -119,8 +118,21 @@
             <h2>Safeguarding and Risk Management:</h2>
             <p>GIEO Gita UK is dedicated to ensuring the safety and well-being of all participants. Our comprehensive safeguarding policies and risk management strategies are in place to provide a secure environment for everyone involved. Qualified first aiders will be on-site and first aid stations will be established at strategic points. Participants will be informed about the location of these stations and emergency procedures at the start of the event.</p>
         </div>
+        <div class="safeguarding">
+            <h2>PARKING FOR SATURDAY 10th AUGUST 2024</h2>
+            <p>We are excited to welcome you to the event on Saturday at Queen Elizabeth Hall. Please find important information regarding parking below:
+                  <p><strong>Parking on Site:</strong></p> 
+          <p>&#x25C8; We have a limited number of reserved parking spaces available free of charge in the underground car park.</p>
+       <p>&#x25C8; To access these spaces, you must arrive early but not before 9 AM.</p> 
+        <p>&#x25C8; If the underground car park reaches capacity, additional parking is available in the overground car park.</p>
+            <p><strong>Overground Car Park:</strong></p>
+         <p>&#x25C8; The overground car park offers free parking for up to three hours.</p>
+                <p>&#x25C8; To access this free three-hour parking, you must retrieve a ticket from the machine and display it in your windscreen window.</p> 
+                  <p>&#x25C8; We strongly encourage car sharing to maximize the availability of parking spaces for all attendees.</p>
+</p>
+        </div>
         <p>
-            <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302418', '_blank')">Book your tickets here</button>
+            <!--<button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302418', '_blank')">Book your tickets here</button>-->
             <button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/', '_self')">Back to homepage</button>
         </p>
     </div>

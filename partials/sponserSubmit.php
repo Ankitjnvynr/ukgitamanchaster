@@ -23,7 +23,7 @@ try {
     )";
 
     $conn->query($sql); // Execute SQL query directly
-    echo "Table created successfully. ";
+    
 } catch (Exception $e) {
     error_log("Error creating table: " . $e->getMessage());
     echo "An error occurred while creating the table. Please try again.";
@@ -38,7 +38,7 @@ try {
     // Execute SQL statement
     $conn->query($sql);
 
-    echo "New record created successfully";
+    echo 1;
 } catch (Exception $e) {
     error_log("Error: " . $e->getMessage());
     echo "An error occurred while inserting the data. Please try again.";

@@ -6,15 +6,15 @@
     <title>Manchester Gita Festival - Friday 9th August 2024</title>
     <link rel="stylesheet" href="css/day1.css">
     <style>
+    
+    
        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background: #f7e092;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
-            
         }
         
         .image-container {
@@ -53,6 +53,7 @@
             font-size: medium;
             font-weight: 600;
         }
+        
         @media (min-width: 768px) {
             .content-container {
                 display: flex;
@@ -69,19 +70,19 @@
         }
     </style>
 </head>
-<body>
-    <div style="background: #f7e092;" class="container-fluid m-0 ">
+<body style="background: #f7e092;">
+    <div  class="container-fluid m-0 ">
         <div class="container">
             <img width="100%" src="header.jpg" alt="">  
         </div>
     </div>
     <div class="container">
-        <h1>Manchester Gita Festival - Friday, 9th August 2024 – Cultural Programme</h1>
+        <h1>Manchester Gita Festival - Friday, 9th August 2024 – Gita Conference</h1>
         <div class="event-details">
             <h2>Venue Details:</h2>
             <div class="content-container">
                 <div class="image-container">
-                    <img src="guruji.jpg" alt="Guruji">
+                    <img src="gita.jpeg" alt="Gita">
                 </div>
                 <div class="text-container textbold">
                     <div>Location:  Manchester</div>
@@ -92,8 +93,8 @@
                 </div>
             </div>
             <p> 
-                <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302215', '_blank')">Book your tickets here</button>
-                <button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/')">Back to homepage</button>
+                <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302215', '_blank')">Book your free tickets</button>
+                <!--<button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/')">Back to homepage</button>-->
             </p>
         </div>
         <div class="event-details">
@@ -101,13 +102,13 @@
             <p class="newli">The opening day of the Manchester Gita Festival will commence with an engaging launch event at Wythenshawe Forum welcoming diverse communities and leaders from Greater Manchester. The program will feature:</p>
             <ul class="schedule">
                 <li class="newli"><span class="timming">5:00 PM - 5:30 PM:</span> Welcome and Opening Ceremony</li>
-                <p>Doors open at 4:50 PM. Guests will be welcomed by the committee in the annex to the left of the stage. Opening address by GIEO Gita UK representatives followed by a Ganesh Vandana dance performance.</p>
+                <p>Doors open at 4:50 PM.Opening address by GIEO Gita UK representatives followed by a Ganesh Vandana dance performance.</p>
                 <li class="newli"><span class="timming">5:30 PM - 6:00 PM:</span> Indian Choir Performance</li>
                 <p>A mesmerizing performance by the Indian Choir.</p>
                 <li class="newli"><span class="timming">6:00 PM - 6:30 PM:</span> Guest Speakers and Lighting of the Deep</li>
                 <p>Introduction and felicitation of guests. Lighting of the Deep by dignitaries.</p>
                 <li class="newli"><span class="timming">6:30 PM - 7:50 PM:</span> Enlightening Discussions and Cultural Program</li>
-                <p>Guest speakers will share insights related to the Bhagwad Gita. Cultural performances celebrating Indian leaders in Greater Manchester. Exhibition on the Bhagwad Gita featuring cultural performances and a visual backdrop of Kurukshetra.</p>
+                <p>Guest speakers will share insights related to the Bhagwad Gita. Celebrating Indian leaders in Greater Manchester. Exhibition on the Bhagwad Gita featuring cultural performances and a visual backdrop of Kurukshetra.</p>
                 <li class="newli"><span class="timming">7:50 PM - 8:00 PM:</span> Discourse and Summary</li>
                 <p>A special discourse by Swami Gyananand Ji Maharaj. Closing recitation by children.</p>
                 <li class="newli"><span class="timming">8:00 PM - 8:30 PM:</span> Bhojan (Dinner)</li>
@@ -118,8 +119,12 @@
             <h2>Safeguarding and Risk Management:</h2>
             <p>GIEO Gita UK is dedicated to ensuring the safety and well-being of all participants. Our comprehensive safeguarding policies and risk management strategies are in place to provide a secure environment for everyone involved. Qualified first aiders will be on-site and first aid stations will be established at strategic points. Participants will be informed about the location of these stations and emergency procedures at the start of the event.</p>
         </div>
+        <div class="safeguarding">
+            <h2>PARKING FOR FRIDAY 9th AUGUST 2024</h2>
+            <p>&#x25C8; <strong> Parking is available on-site</strong>.</p>
+        </div>
         <p> 
-            <button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302215', '_blank')">Book your tickets here</button>
+            <!--<button class="btn btn-primary btn-custom" onclick="window.open('https://www.tickettailor.com/events/gieogitauk/1302215', '_blank')">Book your tickets here</button>-->
             <button class="btn btn-primary btn-custom" onclick="window.open('https://gieogita.org.uk/')">Back to homepage</button>
         </p>
     </div>
