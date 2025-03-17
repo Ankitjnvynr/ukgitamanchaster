@@ -4,9 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Manchester Gita Festival 2024 - GIEO Gita UK
-    </title>
+    <title>Manchester Gita Festival 2025 | GIEO Gita UK</title>
+    <meta name="title" content="Manchester Gita Festival 2025 | GIEO Gita UK">
+<meta name="description" content="Join us at the Manchester Gita Festival 2025 from 20th to 22nd June — a vibrant celebration of Yoga, peace, and unity inspired by the Bhagwad Gita. Experience workshops, cultural programs, and International Yoga Day events.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.gieogita.org.uk/manchester-gita-festival-2025">
+<meta property="og:title" content="Manchester Gita Festival 2025 | GIEO Gita UK">
+<meta property="og:description" content="Celebrate the true essence of Yoga with us in Manchester, June 20-22, 2025. Participate in inclusive workshops, taster sessions, and International Yoga Day celebrations.">
+<meta property="og:image" content="https://www.gieogita.org.uk/imgs/manchaster-gita-festival-2025-hero-banner.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.gieogita.org.uk/manchester-gita-festival-2025">
+<meta property="twitter:title" content="Manchester Gita Festival 2025 | GIEO Gita UK">
+<meta property="twitter:description" content="Dive into a three-day celebration of Yoga and community from 20–22 June 2025 in Manchester. Experience the unity, peace, and spiritual depth of the Gita.">
+<meta property="twitter:image" content="https://www.gieogita.org.uk/imgs/manchaster-gita-festival-2025-hero-banner.jpg">
+
+<!-- Additional SEO Tags -->
+<meta name="keywords" content="Manchester Gita Festival 2025, GIEO Gita UK, Yoga Festival UK, International Yoga Day 2025, Bhagwad Gita Event UK, Yoga in Manchester, Yoga Workshops, Yoga Exhibitions, Yoga Day UK">
+<meta name="author" content="GIEO Gita UK">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -162,12 +180,12 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/bhgawat gita pujan.png" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
+                <img src="imgs/gieo-gita-uk-yoga.jpg" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
             </div>
         </div>
         <div class="row mt-5 align-items-center">
             <div class="col-md-4">
-                <img src="imgs/bhagwat gita book - GIEO Gita.jpg" alt="Opening Ceremony Image"
+                <img src="imgs/international-day-for-yoga-2025.webp" alt="Opening Ceremony Image"
                     class="img-fluid rounded mb-4">
             </div>
             <div class="col-md-8">
@@ -220,12 +238,12 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/gieo gita uk .jpg" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
+                <img src="imgs/yoga-in-park-gieo-gita-uk.webp" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
             </div>
         </div>
         <div class="row mt-5 align-items-center">
             <div class="col-md-4">
-                <img src="imgs/gieo gita uk.jpg" alt="Opening Ceremony Image"
+                <img src="imgs/International-Yoga-Day-2025.jpg" alt="International-Yoga-Day-2025 GIEO gita uk"
                     class="img-fluid rounded mb-4">
             </div>
             <div class="col-md-8">
@@ -253,7 +271,7 @@
         <!-- Friday, 9th August 2024 – Cultural Programme -->
         <div class="row mt-5 align-items-center">
             <h4 class="fw-semibold ">Key Highlights:</h4>
-            <div class="col-md-8">
+            <div class="col-md-8 text-justify">
                 <ul class="themeclr">
                     <li>
                         <strong>Defining the True Form & Origin of Yoga:</strong> Sessions exploring the ancient Indian
@@ -296,7 +314,7 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/swami gyananand ji maharaj.png" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
+                <img src="imgs/yoga-old.jpg" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
             </div>
         </div>
         <p class="text-justify themeclr">
