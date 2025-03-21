@@ -180,12 +180,12 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/gieo-gita-uk-yoga.jpg" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
+                <img src="imgs/9th.jpeg" alt="Opening Ceremony Image" class="img-fluid rounded mb-4">
             </div>
         </div>
         <div class="row mt-5 align-items-center">
             <div class="col-md-4">
-                <img src="imgs/international-day-for-yoga-2025.webp" alt="Opening Ceremony Image"
+                <img src="imgs/bhagwat gita book - GIEO Gita.jpg" alt="Opening Ceremony Image"
                     class="img-fluid rounded mb-4">
             </div>
             <div class="col-md-8">
@@ -238,12 +238,12 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/yoga-in-park-gieo-gita-uk.webp" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
+                <img src="imgs/bhgawat gita pujan.png" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
             </div>
         </div>
         <div class="row mt-5 align-items-center">
             <div class="col-md-4">
-                <img src="imgs/International-Yoga-Day-2025.jpg" alt="International-Yoga-Day-2025 GIEO gita uk"
+                <img src="imgs/gieo gita uk .jpg" alt="International-Yoga-Day-2025 GIEO gita uk"
                     class="img-fluid rounded mb-4">
             </div>
             <div class="col-md-8">
@@ -314,7 +314,7 @@
 
             </div>
             <div class="col-md-4">
-                <img src="imgs/yoga-old.jpg" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
+                <img src="imgs/swami gyananand ji maharaj.png" alt="International-Yoga-Day-2025 GIEO gita uk" class="img-fluid rounded mb-4">
             </div>
         </div>
         <p class="text-justify themeclr">
