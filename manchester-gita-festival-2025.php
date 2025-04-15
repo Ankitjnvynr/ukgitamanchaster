@@ -8,6 +8,7 @@
     <meta name="title" content="Manchester Gita Festival 2025 | GIEO Gita UK">
 <meta name="description" content="Join us at the Manchester Gita Festival 2025 from 20th to 22nd June — a vibrant celebration of Yoga, peace, and unity inspired by the Bhagwad Gita. Experience workshops, cultural programs, and International Yoga Day events.">
 
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.gieogita.org.uk/manchester-gita-festival-2025">
